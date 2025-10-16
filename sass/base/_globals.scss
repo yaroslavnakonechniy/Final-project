@@ -1,0 +1,28 @@
+
+@use '../base/variables' as *;
+
+body{
+  font-family: $inter;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 1s ease, transform 2s ease;
+}
+
+button:active {
+  transform: scale(0.55);
+}

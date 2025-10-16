@@ -1,0 +1,13 @@
+
+
+@mixin size-weight($size, $weight){
+    font-size: $size;
+    font-weight: $weight;
+}
+@mixin flex-center-between($gap) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: $gap;
+}
