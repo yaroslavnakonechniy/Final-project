@@ -1,0 +1,39 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.hero {
+  background: url('../assets/img/hero/hero-bg.png') 100% 65% no-repeat;
+  padding: 140px 0;
+  background-color: $primary-dark;
+}
+
+.block {
+
+  &__container {
+    @include flex-center-between(14px);
+  }
+
+  &__body {
+    width: 656px;
+  }
+
+  &__title {
+    color: $secondary-white;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    color: $secondary-white;
+    margin-bottom: 60px;
+  }
+
+  &__buttun {
+  }
+    
+  &__image {
+    width: 824px;
+    height: 549px;
+    background-color: $secondary-blue;
+  }
+}
