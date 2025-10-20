@@ -1,0 +1,31 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.free-trial {
+    background-color: $primary-dark;
+
+		&__container {
+            display: block;
+            text-align: center;
+            width: 600px;
+            margin: 0 auto;
+		}
+
+		&__app-icon {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+		}
+
+		&__app-icon-item {
+		}
+        
+        &__text{
+            margin-bottom: 40px;
+        }
+
+        &__button{
+            margin-bottom: 40px;
+        }
+}
