@@ -344,6 +344,18 @@ button:active {
   background-color: #A7CEFC;
 }
 
+.your-work {
+  background-color: #043873;
+}
+.your-work__container {
+  display: block;
+  place-items: center;
+}
+.your-work__body {
+  text-align: center;
+  width: 1064px;
+}
+
 .container {
   max-width: 1480px;
   margin: 0 auto;

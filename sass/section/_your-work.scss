@@ -1,0 +1,17 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.your-work {
+    background-color: $primary-dark;
+
+    &__container{
+        display: block;
+        place-items: center;
+    }
+
+    &__body{
+        text-align: center;
+        width: 1064px;
+    }
+}
