@@ -45,3 +45,20 @@
     transition: opacity 1s ease;   
   }
 }
+
+@mixin checked ($url) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &::before{
+      content: '';
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background: $url;
+      margin-right: 19px;
+      
+    }
+}

@@ -173,13 +173,11 @@ button:active {
 
 .hero {
   background: url("../assets/img/hero/hero-bg.png") 100% 65% no-repeat;
-  padding: 140px 0;
   background-color: #043873;
 }
 .hero__title {
   font-size: 64px;
   font-weight: 700;
-  margin-bottom: 30px;
 }
 
 .block__container {
@@ -217,6 +215,111 @@ button:active {
   width: 824px;
   height: 549px;
   background-color: #A7CEFC;
+}
+
+.pricing__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.pricing__cards {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+.pricing__personal {
+  padding: 80px 44px;
+  background-color: #043873;
+  border-radius: 10px;
+  color: #FFFFFF;
+}
+.card {
+  padding: 40px 44px;
+  box-sizing: border-box;
+}
+.card__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-bottom: 25px;
+}
+.card__pricing {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.card__text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  margin-bottom: 25px;
+}
+.card__list {
+  margin-bottom: 25px;
+}
+.card__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.card__item::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background: url("../assets/icon/list/check.svg") center/contain no-repeat;
+  margin-right: 19px;
+}
+.card__link {
+  font-size: 16px;
+  font-weight: 400;
+  color: #212529;
+}
+
+.btn-price {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+  background-color: #4F9CF9;
+  padding: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+  line-height: 23px;
+  letter-spacing: 0.4px;
+  border: none;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #212529;
+  border: 1px solid #FFE492;
+}
+
+.btn-secondary-dark {
+  background-color: #4F9CF9;
+  color: #FFFFFF;
+  border: none;
+}
+
+.border--pricing {
+  border: 1px solid #FFE492;
+  border-radius: 10px;
+}
+
+.checked {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.checked::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background: url("../assets/icon/list/yellow-check.svg") center/contain no-repeat;
+  margin-right: 19px;
 }
 
 .use {
