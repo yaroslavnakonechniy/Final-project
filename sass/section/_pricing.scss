@@ -1,0 +1,90 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.pricing {
+
+  &__container {
+  }
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  &__cards {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__free {
+  }
+
+  &__personal {
+    padding: 80px 44px;
+    background-color: $primary-dark;
+    border-radius: 10px;
+    color: $secondary-white;
+  }
+
+  &__organization {
+  }
+}
+
+.card {
+  padding: 40px 44px;
+  box-sizing: border-box;
+
+  &__title {
+    @include size-weight(24px, 600);
+    line-height: 36px;
+    margin-bottom: 25px;
+  }
+
+  &__pricing {
+    display: block;
+    @include size-weight(36px, 700);
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    @include size-weight(18px, 500);
+    line-height: 23px;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    margin-bottom: 25px;
+  }
+
+  &__item {
+      @include checked (url('../assets/icon/list/check.svg') center / contain no-repeat);
+  }
+
+  &__link {
+    @include size-weight(16px, 400);
+    color: $secondary-black;
+  }
+}
+
+.btn-price{
+  @include btn(16px, 40px, 40px);
+  background-color: $secondary-white;
+  color: $secondary-black;
+  border: 1px solid $secondary-yellow;
+}
+
+.btn-secondary-dark{
+  background-color: $primary-light;
+  color: $secondary-white;
+  border: none;
+}
+
+.border--pricing{
+  border: 1px solid $secondary-yellow;
+  border-radius: 10px;
+}
+
+.checked{
+  @include checked (url('../assets/icon/list/yellow-check.svg') center / contain no-repeat);
+}
