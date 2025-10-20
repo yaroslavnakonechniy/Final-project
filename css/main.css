@@ -178,6 +178,27 @@ button:active {
   color: #212529;
 }
 
+.free-trial {
+  background-color: #043873;
+}
+.free-trial__container {
+  display: block;
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+}
+.free-trial__app-icon {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.free-trial__text {
+  margin-bottom: 40px;
+}
+.free-trial__button {
+  margin-bottom: 40px;
+}
+
 .hero {
   background: url("../assets/img/hero/hero-bg.png") 100% 65% no-repeat;
   background-color: #043873;
@@ -204,7 +225,7 @@ button:active {
 .block__text {
   margin-bottom: 60px;
 }
-.block__buttun {
+.block__button {
   position: relative;
   font-size: 18px;
   font-weight: 500;
