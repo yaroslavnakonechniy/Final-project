@@ -6,12 +6,18 @@
   background: url('../assets/img/hero/hero-bg.png') 100% 65% no-repeat;
   padding: 140px 0;
   background-color: $primary-dark;
+
+  &__title{
+    @include size-weight(64px, 700);
+    margin-bottom: 30px;
+  }
 }
 
 .block {
 
   &__container {
     @include flex-center-between(14px);
+    color: $secondary-white;
   }
 
   &__body {
@@ -19,16 +25,15 @@
   }
 
   &__title {
-    color: $secondary-white;
     margin-bottom: 30px;
   }
 
   &__text {
-    color: $secondary-white;
     margin-bottom: 60px;
   }
 
   &__buttun {
+    @include btn(20px, 20px, 41px);
   }
     
   &__image {

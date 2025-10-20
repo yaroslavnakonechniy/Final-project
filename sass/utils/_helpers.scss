@@ -1,0 +1,14 @@
+
+@use '../base/variables' as *;
+
+.color-white{
+  color: $secondary-white;
+}
+
+.color-dark{
+  color: $secondary-black;
+}
+
+.padding-140{
+  padding: 140px 0;
+}

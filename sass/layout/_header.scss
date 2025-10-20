@@ -3,7 +3,6 @@
 @use '../base/mixin' as *;
 
 .header {
-
   background-color: $primary-dark;
   padding: 16px 0;
 
@@ -40,18 +39,7 @@
   }
 
   &__button-try {
-    padding: 18.5px 24px;
-    padding-right: 47px;
-    background-color: $primary-light;
-    color: $secondary-white;
-    @include size-weight(18px, 500);
-    line-height: 23px;
-    border: none;
-    border-radius: 8px;
-    position: relative;
-    transition: opacity 0.5s ease;
-    letter-spacing: 0.3px;
-
+    @include btn(18.5px, 24px, 47px);
   }
 }
 
@@ -61,8 +49,8 @@
     height: 34px;
   }
 }
-.list {
 
+.list {
   &__item {
     display: flex;
     gap: 32px;

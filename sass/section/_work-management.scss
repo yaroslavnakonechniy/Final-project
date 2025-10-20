@@ -1,0 +1,24 @@
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.work{
+  padding: 140px 0;
+
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+    
+
+}
+
+.block__image-work{
+  width: 748px;
+  height: 547px;
+  background-color: $secondary-blue;
+}
+
+.block__image-work-together{
+}
