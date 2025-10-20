@@ -1,0 +1,26 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.our-sponsors {
+
+  &__container {
+    display: block;
+    
+    place-items: center;
+  }
+
+  &__body {
+    text-align: center;
+    width: 100%;
+  }
+  
+  &__images{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+
+  &__image{
+  }
+}
