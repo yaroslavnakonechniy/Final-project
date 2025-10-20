@@ -344,6 +344,10 @@ button:active {
   background-color: #A7CEFC;
 }
 
+.your-data__image {
+  background-color: #FFFFFF;
+}
+
 .your-work {
   background-color: #043873;
 }
