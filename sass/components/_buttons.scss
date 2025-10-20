@@ -1,0 +1,15 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.btn{
+  @include btn(20px, 40px, 64px);
+}
+
+.btn-arrow-21{
+  @include arrow-btn(21px);
+}
+
+.btn-arrow-41{
+  @include arrow-btn(41px);
+}
