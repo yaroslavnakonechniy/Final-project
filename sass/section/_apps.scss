@@ -1,0 +1,15 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.apps {
+  background-color: $primary-dark;
+
+  &__container {
+
+  }
+  
+  &__image{
+    background-color: $primary-dark;
+  }
+}

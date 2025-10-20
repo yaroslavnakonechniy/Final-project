@@ -167,6 +167,13 @@ button:active {
   transition: opacity 1s ease;
 }
 
+.apps {
+  background-color: #043873;
+}
+.apps__image {
+  background-color: #043873;
+}
+
 .customize__container {
   color: #212529;
 }
