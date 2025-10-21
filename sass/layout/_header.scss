@@ -51,10 +51,10 @@
     position: relative;
     padding-right: 34px;
     font-family: $dm;
-    @include size-weight(16px, 500);
-    line-height: 23px;
+    @include size-weight($fontSize, 500);
+    line-height: $ParagraphP2MediumLineHeight;
     color: $secondaryWhite;
-    letter-spacing: 1.65px;
+
 
     &::after{
       position: absolute;

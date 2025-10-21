@@ -7,7 +7,7 @@
   background-color: $primaryDark;
 
   &__title{
-    @include size-weight(64px, 700);
+    @include size-weight($H2FontSize, 700);
   }
 }
 
