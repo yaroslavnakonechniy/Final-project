@@ -50,19 +50,7 @@
     @include size-weight($fontSize, 500);
     line-height: $ParagraphP2MediumLineHeight;
     color: $secondaryWhite;
-
-
-    &::after{
-      position: absolute;
-      content: '';
-      top: 50%;
-      right: 5px;
-      width: 13px;
-      height: 6px;
-      color: $secondaryWhite;
-      background: url('../assets/icon/arrow-down-white.svg') center / contain no-repeat;
-      transform: translateY(-50%);
-    }
+    @include arrow-menu();
 
     &:hover::after{
       transform: scale(1.1);

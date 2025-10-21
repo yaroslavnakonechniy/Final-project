@@ -6,10 +6,12 @@
 
   &__container {
   }
+
   &__header {
     text-align: center;
     margin-bottom: 60px;
   }
+  
   &__cards {
     display: flex;
     gap: 32px;
@@ -53,11 +55,10 @@
   }
 
   &__list {
-
   }
 
   &__item {
-      @include checked (url('../assets/icon/list/check.svg') center / contain no-repeat);
+    @include checked (url('../assets/icon/list/check.svg') center / contain no-repeat);
   }
 
   &__link {
@@ -87,5 +88,4 @@
   @include size-weight($fontSize, 500);
   line-height: $ParagraphP2MediumLineHeight;
   color: $secondaryWhite;
-  
 }
