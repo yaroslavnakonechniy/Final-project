@@ -1,0 +1,129 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.footer {
+    background-color: $primary-dark;
+    color: $secondary-white;
+    padding-top: 140px;
+    padding-bottom: 32px;
+		&__container {
+            display: flex;
+            flex-direction: column;
+		}
+
+		&__body {
+            display: flex;
+            gap: 100px;
+            margin-bottom: 67px;
+		}
+
+		&__logo {
+            
+		}
+
+        &__logo-link{
+            
+        }
+
+		&__image {
+            width: 191px;
+            height: 34px;
+            margin-bottom: 1 5px;
+		}
+
+		&__text {
+            @include size-weight(18px, 400);
+            max-width: 240px;
+            line-height: 30px;
+		}
+
+		&__navigation {
+            width: 205px;
+		}
+
+        &__navigation-title{
+            @include size-weight(18px, 700);
+            margin-bottom: 16px;
+
+        }
+
+		&__list-product {
+		}
+
+		&__item {
+		}
+
+        &__link{
+            @include size-weight(16px, 400);
+            line-height: 40px;
+            color: $secondary-white;
+        }
+
+		&__list-resources {
+		}
+
+		&__list-company {
+		}
+
+		&__try {
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+            max-width: 259px;
+            @include size-weight(28px, 700);
+            line-height: 36px;
+		}
+
+		&__try-title {
+            
+		}
+
+		&__line {
+            position: relative;
+            margin-bottom: 32px;
+
+            &::after{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $secondary-black;
+            }
+		}
+
+		&__copy-rigth {
+            display: flex;
+            justify-content: space-between;
+		}
+}
+
+.copy-right {
+
+		&__navigation {
+		}
+
+		&__list {
+          display: flex;
+          gap: 60px;
+		}
+
+		&__link {
+		}
+
+		&__item {
+		}
+
+		&__english {
+		}
+
+		&__social {
+            display: flex;
+            gap: 32px;
+		}
+
+		&__icons {
+		}
+}
