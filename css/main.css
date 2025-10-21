@@ -148,6 +148,7 @@ button:active {
 }
 .btn--yellow {
   background-color: #FFE492;
+  color: #043873;
 }
 .btn--border-yellow {
   background-color: #FFFFFF;
@@ -266,20 +267,17 @@ button:active {
   justify-content: center;
   align-items: center;
 }
-.pricing__personal {
-  padding: 80px 44px;
-  background-color: #043873;
-  border-radius: 10px;
-  color: #FFFFFF;
-}
 .card {
+  width: 472px;
   padding: 40px 44px;
   box-sizing: border-box;
+  border: 1px solid #FFE492;
+  border-radius: 10px;
 }
 .card__title {
   font-size: 1.333333333rem;
   font-weight: 600;
-  line-height: 36px;
+  line-height: 2;
   margin-bottom: 25px;
 }
 .card__pricing {
@@ -291,10 +289,7 @@ button:active {
 .card__text {
   font-size: 18px;
   font-weight: 500;
-  line-height: 23px;
-  margin-bottom: 25px;
-}
-.card__list {
+  line-height: 1.277777778;
   margin-bottom: 25px;
 }
 .card__item {
@@ -314,20 +309,16 @@ button:active {
 .card__link {
   font-size: 0.8888888889rem;
   font-weight: 400;
+  line-height: 1.111111111;
   color: #212529;
 }
 
-.border--pricing {
-  border: 1px solid #FFE492;
-  border-radius: 10px;
-}
-
-.checked {
+.active-checked {
   display: flex;
   align-items: center;
   margin-bottom: 25px;
 }
-.checked::before {
+.active-checked::before {
   content: "";
   top: 0;
   left: 0;
@@ -335,6 +326,27 @@ button:active {
   height: 18px;
   background: url("../assets/icon/list/yellow-check.svg") center/contain no-repeat;
   margin-right: 19px;
+}
+
+.active-pricing-card {
+  width: 472px;
+  padding: 80px 44px;
+  background-color: #043873;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+}
+
+.active-pricing-card-price {
+  color: #FFE492;
+}
+
+.active-pricing-card-link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.277777778;
+  color: #FFFFFF;
 }
 
 .testimonial__container {
@@ -483,10 +495,6 @@ button:active {
 }
 .header__container {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
 }
 .header__navigation {
   display: flex;
@@ -618,4 +626,17 @@ button:active {
 
 .color-dark {
   color: #212529;
+}
+
+.padding-140 {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.mr-60px {
+  margin-right: 60px;
+}
+
+.ml-auto {
+  margin-left: auto;
 }/*# sourceMappingURL=main.css.map */

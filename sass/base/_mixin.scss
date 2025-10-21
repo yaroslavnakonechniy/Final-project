@@ -14,8 +14,6 @@
   gap: $gap;
 }
 
-
-
 @mixin checked ($url) {
     display: flex;
     align-items: center;
@@ -29,6 +27,5 @@
       height: 18px;
       background: $url;
       margin-right: 19px;
-      
     }
 }
