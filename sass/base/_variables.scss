@@ -9,5 +9,46 @@ $secondary-blue: #A7CEFC;
 $secondary-white: #FFFFFF;
 $secondary-black: #212529;
 
+// === Fonts ===
 $inter: 'Inter', sans-serif;
 $dm: 'DM Sans 9pt', sans-serif;
+
+// === Default ===
+$fontSize: 18px;
+$lineHeight: 1.66666667;
+$letterSpacing: -0.02rem;
+
+// === Font Size ===
+$H1FontSize: 4rem;
+$H2FontSize: 3.555555556rem;
+$H3FontSize: 3rem;
+$H4FontSize: 2rem;
+$H5FontSize: 1.555555556rem;
+
+// === Paragraph P1===
+// === Font size ===
+$ParagraphP1SemiBoldFontSize: 1.333333333rem;
+$ParagraphP1RegularFontSize: 1.333333333rem;
+
+$ParagraphP1SemiBoldLineHeight: 2;
+$ParagraphP1RegularLineHeight: 1.77777778;
+
+// === Paragraph P2===
+// === Font size ===
+$ParagraphP2SemiBoldFontSize: 1rem;
+$ParagraphP2MediumFontSize: 1rem;
+$ParagraphP2RegularFontSize: $fontSize;
+
+$ParagraphP2SemiBoldLineHeight: auto;
+$ParagraphP2MediumLineHeight: 1.277777778;
+$ParagraphP2RegularLineHeight: $lineHeight;
+
+
+// === Breakpoints ===
+$breakpoints: (
+    xs: 0,
+    sm: 320px,
+    md: 768px,
+    lg: 1152px,
+    xl: 1400px,
+);
