@@ -21,10 +21,6 @@
   }
 
   &__personal {
-    padding: 80px 44px;
-    background-color: $primaryDark;
-    border-radius: 10px;
-    color: $secondaryWhite;
   }
 
   &__organization {
@@ -32,12 +28,15 @@
 }
 
 .card {
+  width: 472px;
   padding: 40px 44px;
   box-sizing: border-box;
+  border: 1px solid $secondaryYellow;
+  border-radius: 10px;
 
   &__title {
     @include size-weight($ParagraphP1RegularFontSize, 600);
-    line-height: 36px;
+    line-height: $ParagraphP1SemiBoldLineHeight;
     margin-bottom: 25px;
   }
 
@@ -49,12 +48,12 @@
 
   &__text {
     @include size-weight($fontSize, 500);
-    line-height: 23px;
+    line-height: $ParagraphP2MediumLineHeight;
     margin-bottom: 25px;
   }
 
   &__list {
-    margin-bottom: 25px;
+
   }
 
   &__item {
@@ -63,15 +62,30 @@
 
   &__link {
     @include size-weight($H6FontSize, 400);
+    line-height: $ParagraphP3RegularLineHeight;
     color: $secondaryBlack;
   }
 }
 
-.border--pricing{
-  border: 1px solid $secondaryYellow;
-  border-radius: 10px;
+.active-checked{
+  @include checked (url('../assets/icon/list/yellow-check.svg') center / contain no-repeat);
 }
 
-.checked{
-  @include checked (url('../assets/icon/list/yellow-check.svg') center / contain no-repeat);
+.active-pricing-card{
+    width: 472px;
+    padding: 80px 44px;
+    background-color: $primaryDark;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+    color: $secondaryWhite;
+}
+.active-pricing-card-price{
+  color: $secondaryYellow;
+}
+.active-pricing-card-link{
+  @include size-weight($fontSize, 500);
+  line-height: $ParagraphP2MediumLineHeight;
+  color: $secondaryWhite;
+  
 }
