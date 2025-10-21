@@ -19,7 +19,7 @@
 }
 
 .card-testimonial {
-    background-color: $primary-light;
+    background-color: $primaryLight;
     border: none;
     border-radius: 10px;
     padding: 60px 40px;
@@ -32,7 +32,7 @@
 		&__text {
             @include size-weight(18px, 400);
             line-height: 30px;
-            color: $secondary-white;
+            color: $secondaryWhite;
             margin-bottom: 40px;
 		}
 
@@ -40,7 +40,7 @@
             display: block;
             width: 100%;
             height: 1px;
-            background-color: $secondary-white;
+            background-color: $secondaryWhite;
         }
 
 		&__name-box {
@@ -61,14 +61,14 @@
 		&__name {
             @include size-weight(24px, 600);
             line-height: 36px;
-            color: $primary-dark;
+            color: $primaryDark;
             margin-bottom: 15px;
 		}
 
         &__position {
             @include size-weight(16px, 400);
             line-height: 20px;
-            color: $secondary-white;
+            color: $secondaryWhite;
 		}
 }
 
@@ -93,29 +93,29 @@
                 height: 12px;
                 border: none;
                 border-radius: 50%;
-                background-color: $primary-light;
+                background-color: $primaryLight;
             }
 		}
 }
 
 .active-slider-navigation {
     &::after{
-        background-color: $primary-dark;
+        background-color: $primaryDark;
     }
 
 }
 
 
 .active{
-    color: $secondary-black;
-    background-color: $secondary-white;
+    color: $secondaryBlack;
+    background-color: $secondaryWhite;
     box-shadow: 15px 10px 50px 0px rgba(0, 0, 0, 0.1);
 }
 
 .active-line{
-    background-color: $secondary-black;
+    background-color: $secondaryBlack;
 }
 
 .active-text{
-    color: $secondary-black;
+    color: $secondaryBlack;
 }

@@ -2,9 +2,9 @@
 @use '../base/mixin' as *;
 
 .use {
-    background-color: $primary-dark;
+    background-color: $primaryDark;
 
     &__container{
-        color: $secondary-white;
+        color: $secondaryWhite;
     }
 }

@@ -3,7 +3,7 @@
 @use '../base/mixin' as *;
 
 .header {
-  background-color: $primary-dark;
+  background-color: $primaryDark;
   padding: 16px 0;
 
   &__container {
@@ -23,23 +23,13 @@
   }
 
   &__button-login {
-    padding: 18.5px 40px;
-    background-color: $secondary-yellow;
-    color: $primary-dark;
-    @include size-weight(18px, 500);
-    line-height: 23px;
-    border: none;
-    border-radius: 8px;
-    transition: opacity 0.5s ease;
+    
 
-    &:hover{
-      opacity: 0.8;
-      transition: opacity 1s ease;
-    }
+    
   }
 
   &__button-try {
-    @include btn(18.5px, 24px, 47px);
+    
   }
 }
 
@@ -63,7 +53,7 @@
     font-family: $dm;
     @include size-weight(16px, 500);
     line-height: 23px;
-    color: $secondary-white;
+    color: $secondaryWhite;
     letter-spacing: 1.65px;
 
     &::after{
@@ -73,7 +63,7 @@
       right: 5px;
       width: 13px;
       height: 6px;
-      color: $secondary-white;
+      color: $secondaryWhite;
       background: url('../assets/icon/arrow-down-white.svg') center / contain no-repeat;
       transform: translateY(-50%);
     }

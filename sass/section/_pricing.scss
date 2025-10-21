@@ -22,9 +22,9 @@
 
   &__personal {
     padding: 80px 44px;
-    background-color: $primary-dark;
+    background-color: $primaryDark;
     border-radius: 10px;
-    color: $secondary-white;
+    color: $secondaryWhite;
   }
 
   &__organization {
@@ -63,25 +63,12 @@
 
   &__link {
     @include size-weight(16px, 400);
-    color: $secondary-black;
+    color: $secondaryBlack;
   }
 }
 
-.btn-price{
-  @include btn(16px, 40px, 40px);
-  background-color: $secondary-white;
-  color: $secondary-black;
-  border: 1px solid $secondary-yellow;
-}
-
-.btn-secondary-dark{
-  background-color: $primary-light;
-  color: $secondary-white;
-  border: none;
-}
-
 .border--pricing{
-  border: 1px solid $secondary-yellow;
+  border: 1px solid $secondaryYellow;
   border-radius: 10px;
 }
 

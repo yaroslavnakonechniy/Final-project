@@ -3,8 +3,8 @@
 @use '../base/mixin' as *;
 
 .footer {
-    background-color: $primary-dark;
-    color: $secondary-white;
+    background-color: $primaryDark;
+    color: $secondaryWhite;
     padding-top: 140px;
     padding-bottom: 32px;
 		&__container {
@@ -36,6 +36,7 @@
             @include size-weight(18px, 400);
             max-width: 240px;
             line-height: 30px;
+            margin-bottom: 23px;
 		}
 
 		&__navigation {
@@ -57,7 +58,7 @@
         &__link{
             @include size-weight(16px, 400);
             line-height: 40px;
-            color: $secondary-white;
+            color: $secondaryWhite;
         }
 
 		&__list-resources {
@@ -67,16 +68,13 @@
 		}
 
 		&__try {
-            display: flex;
-            flex-direction: column;
-            gap: 23px;
             max-width: 259px;
             @include size-weight(28px, 700);
             line-height: 36px;
 		}
 
 		&__try-title {
-            
+            margin-bottom: 23px;
 		}
 
 		&__line {
@@ -90,7 +88,7 @@
                 left: 0;
                 width: 100%;
                 height: 1px;
-                background-color: $secondary-black;
+                background-color: $secondaryBlack;
             }
 		}
 

@@ -14,37 +14,7 @@
   gap: $gap;
 }
 
-@mixin btn ($p-top-bottom, $p-left, $p-right) {
-  position: relative;
-  @include size-weight(18px, 500);
-  color: $secondary-white;
-  background-color: $primary-light;
-  padding: $p-top-bottom;
-  padding-left: $p-left;
-  padding-right: $p-right;
-  line-height: 23px;
-  letter-spacing: 0.4px;
-  border: none;
-  border-radius: 8px;
-}
 
-@mixin arrow-btn($right){
-  &::after{
-    position: absolute;
-    content: '';
-    top: 50%;
-    right: $right;
-    width: 12px;
-    height: 12px;
-    background: url('../assets/icon/arrow-right-for-button.svg') center / contain no-repeat;
-    transform: translateY(-50%);   
-  }
-  
-  &:hover{
-    opacity: 0.8;
-    transition: opacity 1s ease;   
-  }
-}
 
 @mixin checked ($url) {
     display: flex;
