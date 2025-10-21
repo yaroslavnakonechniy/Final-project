@@ -30,7 +30,7 @@
 		}
 
 		&__text {
-            @include size-weight(18px, 400);
+            @include size-weight($fontSize, 400);
             line-height: 30px;
             color: $secondaryWhite;
             margin-bottom: 40px;
@@ -59,14 +59,14 @@
 		}
 
 		&__name {
-            @include size-weight(24px, 600);
+            @include size-weight($ParagraphP1RegularFontSize, 600);
             line-height: 36px;
             color: $primaryDark;
             margin-bottom: 15px;
 		}
 
         &__position {
-            @include size-weight(16px, 400);
+            @include size-weight($H6FontSize, 400);
             line-height: 20px;
             color: $secondaryWhite;
 		}
@@ -102,9 +102,7 @@
     &::after{
         background-color: $primaryDark;
     }
-
 }
-
 
 .active{
     color: $secondaryBlack;

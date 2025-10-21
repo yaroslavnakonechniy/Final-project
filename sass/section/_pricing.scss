@@ -36,19 +36,19 @@
   box-sizing: border-box;
 
   &__title {
-    @include size-weight(24px, 600);
+    @include size-weight($ParagraphP1RegularFontSize, 600);
     line-height: 36px;
     margin-bottom: 25px;
   }
 
   &__pricing {
     display: block;
-    @include size-weight(36px, 700);
+    @include size-weight($H4FontSize, 700);
     margin-bottom: 25px;
   }
 
   &__text {
-    @include size-weight(18px, 500);
+    @include size-weight($fontSize, 500);
     line-height: 23px;
     margin-bottom: 25px;
   }
@@ -62,7 +62,7 @@
   }
 
   &__link {
-    @include size-weight(16px, 400);
+    @include size-weight($H6FontSize, 400);
     color: $secondaryBlack;
   }
 }

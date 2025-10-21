@@ -93,15 +93,15 @@ body {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 4rem;
   font-weight: 700;
 }
 
 p {
   font-size: 18px;
   font-weight: 400;
-  line-height: 30px;
-  letter-spacing: -2%;
+  line-height: 1.66666667;
+  letter-spacing: -0.02rem;
 }
 
 a {
@@ -216,7 +216,7 @@ button:active {
   background-color: #043873;
 }
 .hero__title {
-  font-size: 64px;
+  font-size: 3.555555556rem;
   font-weight: 700;
 }
 
@@ -277,14 +277,14 @@ button:active {
   box-sizing: border-box;
 }
 .card__title {
-  font-size: 24px;
+  font-size: 1.333333333rem;
   font-weight: 600;
   line-height: 36px;
   margin-bottom: 25px;
 }
 .card__pricing {
   display: block;
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 25px;
 }
@@ -312,7 +312,7 @@ button:active {
   margin-right: 19px;
 }
 .card__link {
-  font-size: 16px;
+  font-size: 0.8888888889rem;
   font-weight: 400;
   color: #212529;
 }
@@ -378,14 +378,14 @@ button:active {
 }
 
 .name-box__name {
-  font-size: 24px;
+  font-size: 1.333333333rem;
   font-weight: 600;
   line-height: 36px;
   color: #043873;
   margin-bottom: 15px;
 }
 .name-box__position {
-  font-size: 16px;
+  font-size: 0.8888888889rem;
   font-weight: 400;
   line-height: 20px;
   color: #FFFFFF;
@@ -472,7 +472,7 @@ button:active {
 }
 
 .container {
-  max-width: 1480px;
+  max-width: 1512px;
   margin: 0 auto;
   padding: 0 32px;
 }
@@ -513,11 +513,10 @@ button:active {
   position: relative;
   padding-right: 34px;
   font-family: "DM Sans 9pt", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 23px;
+  line-height: 1.277777778;
   color: #FFFFFF;
-  letter-spacing: 1.65px;
 }
 .list__link::after {
   position: absolute;
@@ -555,7 +554,7 @@ button:active {
 .footer__image {
   width: 191px;
   height: 34px;
-  margin-bottom: 1 5px;
+  margin-bottom: 15px;
 }
 .footer__text {
   font-size: 18px;
@@ -573,14 +572,14 @@ button:active {
   margin-bottom: 16px;
 }
 .footer__link {
-  font-size: 16px;
+  font-size: 0.8888888889rem;
   font-weight: 400;
   line-height: 40px;
   color: #FFFFFF;
 }
 .footer__try {
   max-width: 259px;
-  font-size: 28px;
+  font-size: 1.555555556rem;
   font-weight: 700;
   line-height: 36px;
 }
@@ -619,8 +618,4 @@ button:active {
 
 .color-dark {
   color: #212529;
-}
-
-.padding-140 {
-  padding: 140px 0;
 }/*# sourceMappingURL=main.css.map */
