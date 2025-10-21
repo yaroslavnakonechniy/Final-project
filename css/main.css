@@ -301,10 +301,11 @@ button:active {
   content: "";
   top: 0;
   left: 0;
-  width: 18px;
+  width: 20px;
   height: 18px;
   background: url("../assets/icon/list/check.svg") center/contain no-repeat;
   margin-right: 19px;
+  flex-shrink: 0;
 }
 .card__link {
   font-size: 0.8888888889rem;
@@ -322,10 +323,11 @@ button:active {
   content: "";
   top: 0;
   left: 0;
-  width: 18px;
+  width: 20px;
   height: 18px;
   background: url("../assets/icon/list/yellow-check.svg") center/contain no-repeat;
   margin-right: 19px;
+  flex-shrink: 0;
 }
 
 .active-pricing-card {
@@ -568,7 +570,7 @@ button:active {
   font-size: 18px;
   font-weight: 400;
   max-width: 240px;
-  line-height: 30px;
+  line-height: 1.66666667;
   margin-bottom: 23px;
 }
 .footer__navigation {
@@ -582,16 +584,21 @@ button:active {
 .footer__link {
   font-size: 0.8888888889rem;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 1.111111111;
   color: #FFFFFF;
 }
 .footer__try {
-  max-width: 259px;
+  width: 259px;
   font-size: 1.555555556rem;
   font-weight: 700;
-  line-height: 36px;
+  line-height: 2;
 }
 .footer__try-title {
+  margin-bottom: 23px;
+}
+.footer__try-text {
+  font-size: 0.8888888889rem;
+  font-weight: 400;
   margin-bottom: 23px;
 }
 .footer__line {
@@ -605,7 +612,7 @@ button:active {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #212529;
+  background-color: rgb(46, 78, 115);
 }
 .footer__copy-rigth {
   display: flex;
@@ -615,6 +622,33 @@ button:active {
 .copy-right__list {
   display: flex;
   gap: 60px;
+}
+.copy-right__english {
+  display: block;
+  position: relative;
+  padding-right: 34px;
+  padding-left: 30px;
+}
+.copy-right__english::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 5px;
+  width: 13px;
+  height: 6px;
+  color: #FFFFFF;
+  background: url("../assets/icon/arrow-down-white.svg") center/contain no-repeat;
+  transform: translateY(-50%);
+}
+.copy-right__english::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  background: url("../assets/icon/footer/earth-icon/earth-icon.svg") center/contain no-repeat;
+  transform: translateY(-50%);
 }
 .copy-right__social {
   display: flex;

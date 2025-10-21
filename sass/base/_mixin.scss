@@ -6,6 +6,20 @@
   font-weight: $weight;
 }
 
+@mixin arrow-menu{
+      &::after{
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 5px;
+      width: 13px;
+      height: 6px;
+      color: $secondaryWhite;
+      background: url('../assets/icon/arrow-down-white.svg') center / contain no-repeat;
+      transform: translateY(-50%);
+    }
+}
+
 @mixin flex-center-between($gap) {
   display: flex;
   flex-wrap: nowrap;
@@ -23,9 +37,10 @@
       content: '';
       top: 0;
       left: 0;
-      width: 18px;
+      width: 20px;
       height: 18px;
       background: $url;
       margin-right: 19px;
+      flex-shrink: 0;
     }
 }
