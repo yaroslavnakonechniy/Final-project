@@ -127,46 +127,50 @@ button:active {
 }
 
 .btn {
-  position: relative;
-  font-size: 18px;
-  font-weight: 500;
-  color: #FFFFFF;
-  background-color: #4F9CF9;
-  padding: 20px;
   padding-left: 40px;
-  padding-right: 64px;
-  line-height: 23px;
-  letter-spacing: 0.4px;
+  padding-right: 40px;
+  font-size: 1rem;
+  line-height: 1.277777778;
   border: none;
   border-radius: 8px;
 }
-
-.btn-arrow-21::after {
-  position: absolute;
+.btn--small {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.btn--medium {
+  padding-top: 18.5px;
+  padding-bottom: 18.5px;
+}
+.btn--large {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.btn--yellow {
+  background-color: #FFE492;
+}
+.btn--border-yellow {
+  background-color: #FFFFFF;
+  color: #212529;
+  border: 1px solid #FFE492;
+}
+.btn--blue {
+  background-color: #4F9CF9;
+  color: #FFFFFF;
+}
+.btn--arrow {
+  display: flex;
+  align-items: center;
+}
+.btn--arrow::after {
   content: "";
-  top: 50%;
-  right: 21px;
+  display: block;
   width: 12px;
   height: 12px;
+  margin-left: 18px;
   background: url("../assets/icon/arrow-right-for-button.svg") center/contain no-repeat;
-  transform: translateY(-50%);
 }
-.btn-arrow-21:hover {
-  opacity: 0.8;
-  transition: opacity 1s ease;
-}
-
-.btn-arrow-41::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  right: 41px;
-  width: 12px;
-  height: 12px;
-  background: url("../assets/icon/arrow-right-for-button.svg") center/contain no-repeat;
-  transform: translateY(-50%);
-}
-.btn-arrow-41:hover {
+.btn:hover {
   opacity: 0.8;
   transition: opacity 1s ease;
 }
@@ -199,8 +203,12 @@ button:active {
 .free-trial__text {
   margin-bottom: 40px;
 }
+.free-trial__under-text {
+  margin-top: 40px;
+}
 .free-trial__button {
   margin-bottom: 40px;
+  margin: 0 auto;
 }
 
 .hero {
@@ -228,20 +236,6 @@ button:active {
 }
 .block__text {
   margin-bottom: 60px;
-}
-.block__button {
-  position: relative;
-  font-size: 18px;
-  font-weight: 500;
-  color: #FFFFFF;
-  background-color: #4F9CF9;
-  padding: 20px;
-  padding-left: 20px;
-  padding-right: 41px;
-  line-height: 23px;
-  letter-spacing: 0.4px;
-  border: none;
-  border-radius: 8px;
 }
 .block__image {
   width: 824px;
@@ -321,30 +315,6 @@ button:active {
   font-size: 16px;
   font-weight: 400;
   color: #212529;
-}
-
-.btn-price {
-  position: relative;
-  font-size: 18px;
-  font-weight: 500;
-  color: #FFFFFF;
-  background-color: #4F9CF9;
-  padding: 16px;
-  padding-left: 40px;
-  padding-right: 40px;
-  line-height: 23px;
-  letter-spacing: 0.4px;
-  border: none;
-  border-radius: 8px;
-  background-color: #FFFFFF;
-  color: #212529;
-  border: 1px solid #FFE492;
-}
-
-.btn-secondary-dark {
-  background-color: #4F9CF9;
-  color: #FFFFFF;
-  border: none;
 }
 
 .border--pricing {
@@ -497,6 +467,9 @@ button:active {
   text-align: center;
   width: 1064px;
 }
+.your-work__button {
+  margin: 0 auto;
+}
 
 .container {
   max-width: 1480px;
@@ -526,36 +499,6 @@ button:active {
   display: flex;
   gap: 24px;
 }
-.header__button-login {
-  padding: 18.5px 40px;
-  background-color: #FFE492;
-  color: #043873;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 23px;
-  border: none;
-  border-radius: 8px;
-  transition: opacity 0.5s ease;
-}
-.header__button-login:hover {
-  opacity: 0.8;
-  transition: opacity 1s ease;
-}
-.header__button-try {
-  position: relative;
-  font-size: 18px;
-  font-weight: 500;
-  color: #FFFFFF;
-  background-color: #4F9CF9;
-  padding: 18.5px;
-  padding-left: 24px;
-  padding-right: 47px;
-  line-height: 23px;
-  letter-spacing: 0.4px;
-  border: none;
-  border-radius: 8px;
-}
-
 .logo__img {
   width: 191px;
   height: 34px;
@@ -619,6 +562,7 @@ button:active {
   font-weight: 400;
   max-width: 240px;
   line-height: 30px;
+  margin-bottom: 23px;
 }
 .footer__navigation {
   width: 205px;
@@ -635,13 +579,13 @@ button:active {
   color: #FFFFFF;
 }
 .footer__try {
-  display: flex;
-  flex-direction: column;
-  gap: 23px;
   max-width: 259px;
   font-size: 28px;
   font-weight: 700;
   line-height: 36px;
+}
+.footer__try-title {
+  margin-bottom: 23px;
 }
 .footer__line {
   position: relative;

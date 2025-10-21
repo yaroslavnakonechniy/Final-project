@@ -3,14 +3,59 @@
 @use '../base/mixin' as *;
 
 .btn{
-  @include btn(20px, 40px, 64px);
-}
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: $ParagraphP2MediumFontSize;
+  line-height: $ParagraphP2MediumLineHeight;
+  border: none;
+  border-radius: 8px;
 
-.btn-arrow-21{
-  @include arrow-btn(21px);
-}
+  &--small{
+    padding-top: 16px;
+    padding-bottom: 16px;    
+  }
+  
+  &--medium {
+    padding-top: 18.5px;
+    padding-bottom: 18.5px;
+  }
 
-.btn-arrow-41{
-  @include arrow-btn(41px);
-}
+  &--large{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
+
+  &--yellow{
+    background-color: $secondaryYellow;
+  }
+
+  &--border-yellow{
+    background-color: $secondaryWhite;
+    color: $secondaryBlack;
+    border: 1px solid $secondaryYellow;
+  }
+
+  &--blue{
+    background-color: $primaryLight;
+    color: $secondaryWhite;
+  }
+
+  &--arrow{
+    display: flex;
+    align-items: center;
+    &::after{
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin-left: 18px;
+      background: url('../assets/icon/arrow-right-for-button.svg') center / contain no-repeat;
+    }
+  }
+
+  &:hover{
+    opacity: 0.8;
+    transition: opacity 1s ease;
+  }
+}

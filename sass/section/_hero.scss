@@ -4,7 +4,7 @@
 
 .hero {
   background: url('../assets/img/hero/hero-bg.png') 100% 65% no-repeat;
-  background-color: $primary-dark;
+  background-color: $primaryDark;
 
   &__title{
     @include size-weight(64px, 700);
@@ -15,7 +15,7 @@
 
   &__container {
     @include flex-center-between(14px);
-    color: $secondary-white;
+    color: $secondaryWhite;
   }
 
   &__body {
@@ -31,12 +31,12 @@
   }
 
   &__button {
-    @include btn(20px, 20px, 41px);
+    
   }
     
   &__image {
     width: 824px;
     height: 549px;
-    background-color: $secondary-blue;
+    background-color: $secondaryBlue;
   }
 }

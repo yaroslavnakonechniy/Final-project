@@ -3,7 +3,7 @@
 @use '../base/mixin' as *;
 
 .your-work {
-    background-color: $primary-dark;
+    background-color: $primaryDark;
 
     &__container{
         display: block;
@@ -13,5 +13,9 @@
     &__body{
         text-align: center;
         width: 1064px;
+    }
+
+    &__button{
+        margin: 0 auto;
     }
 }
