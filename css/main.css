@@ -148,6 +148,7 @@ button:active {
 }
 .btn--yellow {
   background-color: #FFE492;
+  color: #043873;
 }
 .btn--border-yellow {
   background-color: #FFFFFF;
@@ -483,10 +484,6 @@ button:active {
 }
 .header__container {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
 }
 .header__navigation {
   display: flex;
@@ -618,4 +615,17 @@ button:active {
 
 .color-dark {
   color: #212529;
+}
+
+.padding-140 {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.mr-60px {
+  margin-right: 60px;
+}
+
+.ml-auto {
+  margin-left: auto;
 }/*# sourceMappingURL=main.css.map */

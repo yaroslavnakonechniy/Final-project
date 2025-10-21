@@ -7,7 +7,7 @@
   padding: 16px 0;
 
   &__container {
-    @include flex-center-between(40px);
+    display: flex;
   }
 
   &__logo {
@@ -23,13 +23,9 @@
   }
 
   &__button-login {
-    
-
-    
   }
 
   &__button-try {
-    
   }
 }
 
