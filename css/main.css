@@ -180,11 +180,17 @@ button:active {
   background-color: #043873;
 }
 .apps__image {
+  width: 582px;
+  height: 470px;
   background-color: #043873;
 }
 
 .customize__container {
   color: #212529;
+}
+.customize__image {
+  width: 714px;
+  height: 532px;
 }
 
 .free-trial {
@@ -220,6 +226,10 @@ button:active {
   font-size: 3.555555556rem;
   font-weight: 700;
 }
+.hero__image {
+  width: 824px;
+  height: 549px;
+}
 
 .block__container {
   display: flex;
@@ -239,8 +249,6 @@ button:active {
   margin-bottom: 60px;
 }
 .block__image {
-  width: 824px;
-  height: 549px;
   background-color: #A7CEFC;
 }
 
@@ -296,16 +304,18 @@ button:active {
   display: flex;
   align-items: center;
   margin-bottom: 25px;
+  position: relative;
+  padding-left: 37px;
 }
 .card__item::before {
+  position: absolute;
   content: "";
-  top: 0;
+  top: 50%;
   left: 0;
   width: 20px;
   height: 18px;
   background: url("../assets/icon/list/check.svg") center/contain no-repeat;
-  margin-right: 19px;
-  flex-shrink: 0;
+  transform: translateY(-50%);
 }
 .card__link {
   font-size: 0.8888888889rem;
@@ -318,16 +328,18 @@ button:active {
   display: flex;
   align-items: center;
   margin-bottom: 25px;
+  position: relative;
+  padding-left: 37px;
 }
 .active-checked::before {
+  position: absolute;
   content: "";
-  top: 0;
+  top: 50%;
   left: 0;
   width: 20px;
   height: 18px;
   background: url("../assets/icon/list/yellow-check.svg") center/contain no-repeat;
-  margin-right: 19px;
-  flex-shrink: 0;
+  transform: translateY(-50%);
 }
 
 .active-pricing-card {
@@ -450,6 +462,10 @@ button:active {
 .use__container {
   color: #FFFFFF;
 }
+.use__image {
+  width: 686px;
+  height: 479px;
+}
 
 .work {
   padding: 140px 0;
@@ -459,14 +475,18 @@ button:active {
   flex-direction: column;
   gap: 100px;
 }
-
-.block__image-work {
+.work__image {
   width: 748px;
   height: 547px;
-  background-color: #A7CEFC;
+}
+.work__image-together {
+  width: 710px;
+  height: 661px;
 }
 
 .your-data__image {
+  width: 681px;
+  height: 381px;
   background-color: #FFFFFF;
 }
 
@@ -673,4 +693,19 @@ button:active {
 
 .ml-auto {
   margin-left: auto;
+}
+
+.w-748px-h-547px {
+  width: 748px;
+  height: 547px;
+}
+
+.w-710px-h-661px {
+  width: 710px;
+  height: 661px;
+}
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
 }/*# sourceMappingURL=main.css.map */
