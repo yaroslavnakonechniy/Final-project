@@ -12,7 +12,7 @@
             margin: 0 auto;
 		}
 
-		&__app-icon {
+		&__app-icons {
             display: flex;
             justify-content: center;
             gap: 40px;
@@ -20,6 +20,10 @@
 
 		&__app-icon-item {
 		}
+
+        &__app-icon{
+            
+        }
         
         &__text{
             margin-bottom: 40px;

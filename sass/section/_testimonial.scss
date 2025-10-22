@@ -9,6 +9,10 @@
             text-align: center;
 		}
 
+        &__title{
+            @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 18% 140%, 75% 120%);
+        }
+
 		&__cards {
             display: flex;
             text-align: left;
@@ -59,6 +63,7 @@
 		}
 
 		&__name {
+            display: block;
             @include size-weight($ParagraphP1RegularFontSize, 600);
             line-height: 36px;
             color: $primaryDark;
@@ -66,6 +71,7 @@
 		}
 
         &__position {
+            display: block;
             @include size-weight($H6FontSize, 400);
             line-height: 20px;
             color: $secondaryWhite;
@@ -74,28 +80,26 @@
 
 .slider {
 
-		&__navigation {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-		}
-
-		&__navigation-item {
-            position: relative;
-            padding-right: 12px;
-
-            &::after{
-                position: absolute;
-                content: '';
-                top: 0;
-                left: 0;
-                width: 12px;
-                height: 12px;
-                border: none;
-                border-radius: 50%;
-                background-color: $primaryLight;
-            }
-		}
+  &__navigation {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+  &__navigation-item {
+    position: relative;
+    padding-right: 12px;
+    &::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        border: none;
+        border-radius: 50%;
+        background-color: $primaryLight;
+    }
+  }
 }
 
 .active-slider-navigation {

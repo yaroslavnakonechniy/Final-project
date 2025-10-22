@@ -3,7 +3,7 @@
 @use '../base/mixin' as *;
 
 .hero {
-  background: url('../assets/img/hero/hero-bg.png') 100% 65% no-repeat;
+  background: url('../assets/img/hero/hero-bg.png') center / 100% no-repeat;
   background-color: $primaryDark;
 
   &__title{
@@ -11,20 +11,22 @@
   }
 
   &__image{
-    width: 824px;
-    height: 549px;
+    @include image-block-parameters(824px, 549px);
   }
 }
 
 .block {
 
   &__container {
-    @include flex-center-between(14px);
+    display: flex;
+    align-items: center;
     color: $secondaryWhite;
   }
 
-  &__body {
-    width: 656px;
+  &__info {
+    margin-right: 18px;
+    flex: 1 1 auto;
+    z-index: 2;
   }
 
   &__title {
@@ -36,10 +38,13 @@
   }
 
   &__button {
-    
   }
     
   &__image {
     background-color: $secondaryBlue;
+  }
+
+  &__img{
+    width: 100%;
   }
 }

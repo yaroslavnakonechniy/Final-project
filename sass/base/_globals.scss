@@ -12,6 +12,14 @@ body{
 
 h1{
   @include size-weight($H1FontSize, 700);
+  line-height:$H1LineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+h2{
+  @include size-weight($H2FontSize, 700);
+  line-height:$H2LineHeight;
+  letter-spacing: $letterSpacing;
 }
 
 p{

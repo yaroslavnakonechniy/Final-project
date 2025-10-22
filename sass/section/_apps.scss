@@ -3,14 +3,14 @@
 @use '../base/mixin' as *;
 
 .apps {
+  background: url('../assets/img/hero/hero-bg.png') center / 100% no-repeat;
   background-color: $primaryDark;
 
   &__container {
   }
   
   &__image{
-    width: 582px;
-    height: 470px;
-    background-color: $primaryDark;
+    @include image-block-parameters(582px, 470px);
+    background-color: none;
   }
 }

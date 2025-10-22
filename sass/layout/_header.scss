@@ -4,10 +4,12 @@
 
 .header {
   background-color: $primaryDark;
-  padding: 16px 0;
+  
 
   &__container {
     display: flex;
+    align-items: center;
+    height: 92px;
   }
 
   &__logo {

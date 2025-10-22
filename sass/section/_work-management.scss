@@ -2,22 +2,27 @@
 @use '../base/mixin' as *;
 
 .work{
-  padding: 140px 0;
-
 
   &__container{
     display: flex;
     flex-direction: column;
     gap: 100px;
+    @include bg-element(10%, -20%, 603px, 449px, url('../assets/img/work/bg-work/bg-work.png') no-repeat);
+  }
+
+  &__title-project{
+    @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 90%, 0 105%); 
+  }
+
+  &__title-together{
+    @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 60%, 70% 100%);
   }
 
   &__image{
-    width: 748px;
-    height: 547px;
+    @include image-block-parameters(748px, 547px);
   }
   
   &__image-together{
-    width: 710px;
-    height: 661px;
+    @include image-block-parameters(710px, 661px);
   }
 }
