@@ -1,6 +1,8 @@
 
 @use '../base/variables' as *;
 @use '../base/mixin' as *;
+@use "sass:map";
+
 
 .apps {
   background: url('../assets/img/hero/hero-bg.png') center / 100% no-repeat;
@@ -12,5 +14,12 @@
   &__image{
     @include image-block-parameters(582px, 470px);
     background-color: none;
+  }
+}
+
+@media (max-width: map.get($breakpoints, lg)) {
+  .apps__image {
+    @include image-block-parameters(528px, 427px);
+    flex: 0 0 528px;
   }
 }

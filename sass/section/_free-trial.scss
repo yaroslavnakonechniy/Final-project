@@ -1,6 +1,8 @@
 
 @use '../base/variables' as *;
 @use '../base/mixin' as *;
+@use "sass:map";
+
 
 .free-trial {
     background-color: $primaryDark;

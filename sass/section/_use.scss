@@ -1,5 +1,6 @@
 @use '../base/variables' as *;
 @use '../base/mixin' as *;
+@use "sass:map";
 
 .use {
     background-color: $primaryDark;
@@ -14,5 +15,24 @@
 
     &__image{
         @include image-block-parameters(686px, 479px);
+    }
+}
+
+@media (max-width: map.get($breakpoints, xl)) {
+    .use__title {
+        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 100%, 150% 100%);
+    }
+}
+
+@media (max-width: map.get($breakpoints, lg)) {
+    .use{
+        &__image{
+            @include image-block-parameters(459px, 320px);
+        }
+
+        &__title{
+            @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 90%, 400% 100%);       
+        }
+
     }
 }

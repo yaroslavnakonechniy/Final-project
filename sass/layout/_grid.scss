@@ -1,7 +1,22 @@
 
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+@use "sass:map";
 
 .container{
   max-width: 1544px;
   margin: 0 auto;
   padding: 0 32px;
+}
+
+@media (max-width: map.get($breakpoints, xl)) {
+  .container{
+    max-width: 1376px;
+  }
+}
+
+@media (max-width: map.get($breakpoints, lg)) {
+  .container{
+    max-width: 1088px;
+  }
 }

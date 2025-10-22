@@ -1,6 +1,8 @@
 
 @use '../base/variables' as *;
 @use '../base/mixin' as *;
+@use "sass:map";
+
 
 .our-sponsors {
 
@@ -25,5 +27,11 @@
   }
 
   &__image{
+  }
+}
+
+@media (max-width: map.get($breakpoints, lg)) {
+  .our-sponsors__title {
+    @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 40% 100%, 70% 90%);
   }
 }

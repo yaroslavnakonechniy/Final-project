@@ -1,6 +1,7 @@
 
 @use '../base/variables' as *;
 @use '../base/mixin' as *;
+@use "sass:map";
 
 .testimonial {
 
@@ -23,9 +24,11 @@
 }
 
 .card-testimonial {
+    width: 471px;
     background-color: $primaryLight;
     border: none;
     border-radius: 10px;
+    box-sizing: border-box;
     padding: 60px 40px;
 
     
@@ -120,4 +123,24 @@
 
 .active-text{
     color: $secondaryBlack;
+}
+
+@media (max-width: map.get($breakpoints, xl)) {
+    .testimonial__title {
+        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 18% 130%, 70% 120%);
+    }
+
+    .card-testimonial {
+        width: 437px;
+    }
+}
+
+@media (max-width: map.get($breakpoints, lg)) {
+    .testimonial__title {
+        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 18% 130%, 70% 120%);
+    }
+
+    .card-testimonial {
+        width: 341px;
+    }
 }
