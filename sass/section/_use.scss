@@ -23,3 +23,16 @@
         @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 100%, 150% 100%);
     }
 }
+
+@media (max-width: map.get($breakpoints, lg)) {
+    .use{
+        &__image{
+            @include image-block-parameters(459px, 320px);
+        }
+
+        &__title{
+            @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 90%, 400% 100%);       
+        }
+
+    }
+}

@@ -7,7 +7,6 @@
 .header {
   background-color: $primaryDark;
   
-
   &__container {
     display: flex;
     align-items: center;
@@ -18,7 +17,7 @@
   }
 
   &__navigation {
-    @include flex-center-between(60px);
+    margin-right: 60px;
   }
 
   &__buttons {
@@ -63,5 +62,52 @@
     &:hover{
       text-decoration: underline;
     }
+  }
+}
+
+.burger__menu{
+
+  display: none;
+  padding-left: 40px;
+  margin-left: 20px;
+  position: relative;
+  &::after,&::before,span{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 42px;
+      height: 2px;
+      background: $secondaryWhite;
+  }
+
+  &::after{
+      top: 12px;
+      left: 0;
+  }
+
+  &::before{
+      top: -12px;
+      left: 0;
+  }
+}
+
+@media (max-width: map.get($breakpoints, xl)) {
+  .header__navigation{
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: map.get($breakpoints, lg)) {
+  .header{
+    &__navigation{
+      display: none;
+    }
+    &__buttons{
+      margin-left: auto;
+    }
+  }
+  .burger__menu{
+    display: block;
   }
 }

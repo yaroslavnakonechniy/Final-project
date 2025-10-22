@@ -18,3 +18,17 @@
     background-color: $secondaryWhite;
   }
 }
+
+@media (max-width: map.get($breakpoints, lg)) {
+  .your-data{
+
+    &__image{
+      @include image-block-parameters(562px, 314px);
+      flex: 0 0 562px;
+    }
+
+    &__title{
+      @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 70% 110%, 120% 90%);
+    }
+  }
+}

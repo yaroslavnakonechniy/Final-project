@@ -134,3 +134,13 @@
         width: 437px;
     }
 }
+
+@media (max-width: map.get($breakpoints, lg)) {
+    .testimonial__title {
+        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 18% 130%, 70% 120%);
+    }
+
+    .card-testimonial {
+        width: 341px;
+    }
+}

@@ -27,9 +27,30 @@
 }
 
 @media (max-width: map.get($breakpoints, xl)) {
-    .your-work {
-        &__container{
-            @include bg-element(-110%, -28%, 700px, 781px, url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / contain no-repeat);
-        }
+    .your-work__container{
+        @include bg-element(-110%, -28%, 700px, 781px, url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / contain no-repeat);
     }
+}
+
+@media (max-width: map.get($breakpoints, lg)) {
+  .your-work{
+
+    &__container{
+        place-items: start;
+        @include bg-element(-110%, -100%, 700px, 781px, url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / contain no-repeat);
+    }
+
+    &__body {
+        width: 650px;
+        text-align: left;
+    }
+
+    &__title{
+        @include underline-bg(url('../assets/img/bg-line/blue-bg-line.png') no-repeat, 45% 30%, 95% 100%);
+    }
+
+    &__button{
+        margin: 0 ;
+    }
+  }
 }

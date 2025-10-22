@@ -100,3 +100,9 @@
     width: 437px;
   }
 }
+
+@media (max-width: map.get($breakpoints, lg)) {
+  .card, .active-pricing-card {
+    width: 341px;
+  }
+}

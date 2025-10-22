@@ -16,3 +16,10 @@
     background-color: none;
   }
 }
+
+@media (max-width: map.get($breakpoints, lg)) {
+  .apps__image {
+    @include image-block-parameters(528px, 427px);
+    flex: 0 0 528px;
+  }
+}

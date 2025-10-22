@@ -39,3 +39,24 @@
     }
   }
 }
+
+@media (max-width: map.get($breakpoints, lg)) {
+  .work{
+    &__image{
+      @include image-block-parameters(527px, 328px);
+    }
+
+    &__image-together{
+      @include image-block-parameters(528px, 491px);
+    }
+
+    &__title-project{
+      @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 60% 50%, 70% 105%); 
+    }
+
+    &__title-together{
+      @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 70% 70%, 110% 70%);
+    }
+    
+  }
+}

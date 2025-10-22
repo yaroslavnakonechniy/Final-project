@@ -24,3 +24,15 @@
     }
   }
 }
+
+@media (max-width: map.get($breakpoints, lg)) {
+  .customize{
+    &__image{
+      @include image-block-parameters(534px, 397px);
+    }
+    
+    &__title{
+        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 85% 50%, 0 100%);
+    }
+  }
+}
