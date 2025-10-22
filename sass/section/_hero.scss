@@ -9,6 +9,11 @@
   &__title{
     @include size-weight($H2FontSize, 700);
   }
+
+  &__image{
+    width: 824px;
+    height: 549px;
+  }
 }
 
 .block {
@@ -35,8 +40,6 @@
   }
     
   &__image {
-    width: 824px;
-    height: 549px;
     background-color: $secondaryBlue;
   }
 }

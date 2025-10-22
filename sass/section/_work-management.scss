@@ -10,15 +10,14 @@
     flex-direction: column;
     gap: 100px;
   }
-    
 
-}
-
-.block__image-work{
-  width: 748px;
-  height: 547px;
-  background-color: $secondaryBlue;
-}
-
-.block__image-work-together{
+  &__image{
+    width: 748px;
+    height: 547px;
+  }
+  
+  &__image-together{
+    width: 710px;
+    height: 661px;
+  }
 }
