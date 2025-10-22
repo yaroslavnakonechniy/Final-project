@@ -1,5 +1,6 @@
 @use '../base/variables' as *;
 @use '../base/mixin' as *;
+@use "sass:map";
 
 .customize {
     
@@ -14,4 +15,12 @@
     &__image{
         @include image-block-parameters(714px, 532px);
     }
+}
+
+@media (max-width: map.get($breakpoints, xl)) {
+  .customize{
+    &__image{
+      @include image-block-parameters(670px, 499px);
+    }
+  }
 }

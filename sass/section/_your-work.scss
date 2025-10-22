@@ -1,6 +1,7 @@
 
 @use '../base/variables' as *;
 @use '../base/mixin' as *;
+@use "sass:map";
 
 .your-work {
     background-color: $primaryDark;
@@ -22,5 +23,13 @@
 
     &__button{
         margin: 0 auto;
+    }
+}
+
+@media (max-width: map.get($breakpoints, xl)) {
+    .your-work {
+        &__container{
+            @include bg-element(-110%, -28%, 700px, 781px, url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / contain no-repeat);
+        }
     }
 }

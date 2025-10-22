@@ -1,6 +1,8 @@
 
 @use '../base/variables' as *;
 @use '../base/mixin' as *;
+@use "sass:map";
+
 
 .apps {
   background: url('../assets/img/hero/hero-bg.png') center / 100% no-repeat;

@@ -1,6 +1,7 @@
 
 @use '../base/variables' as *;
 @use '../base/mixin' as *;
+@use "sass:map";
 
 .pricing {
 
@@ -92,4 +93,10 @@
   @include size-weight($fontSize, 500);
   line-height: $ParagraphP2MediumLineHeight;
   color: $secondaryWhite;
+}
+
+@media (max-width: map.get($breakpoints, xl)) {
+  .card, .active-pricing-card {
+    width: 437px;
+  }
 }
