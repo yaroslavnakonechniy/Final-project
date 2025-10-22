@@ -46,3 +46,31 @@
       transform: translateY(-50%);
     }
 }
+
+@mixin underline-bg($background-url, $background-size, $background-position){
+    background: $background-url;
+    background-size: $background-size;
+    background-position: $background-position
+}
+
+@mixin bg-element( $top, $left, $width, $height, $backgraound-url){
+  position: relative;
+
+  &::before{
+  position: absolute;
+  content: '';
+  display: block;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+  background: $backgraound-url;
+  z-index: 0;
+  }
+}
+
+@mixin image-block-parameters($max-width, $height){
+    max-width: $max-width;
+    width: 100%;
+    height: $height;
+}

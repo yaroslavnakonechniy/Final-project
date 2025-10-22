@@ -8,8 +8,11 @@
         color: $secondaryWhite;
     }
 
+    &__title{
+        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 63%, 80% 100%);       
+    }
+
     &__image{
-        width: 686px;
-        height: 479px;
+        @include image-block-parameters(686px, 479px);
     }
 }

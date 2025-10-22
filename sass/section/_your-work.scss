@@ -8,11 +8,16 @@
     &__container{
         display: block;
         place-items: center;
+        @include bg-element(-110%, -18%, 700px, 781px, url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / contain no-repeat);
     }
 
     &__body{
         text-align: center;
         width: 1064px;
+    }
+
+    &__title{
+        @include underline-bg(url('../assets/img/bg-line/blue-bg-line.png') no-repeat, 25%, 95% 100%);
     }
 
     &__button{

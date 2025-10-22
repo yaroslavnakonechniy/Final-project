@@ -7,8 +7,11 @@
         color: $secondaryBlack;
     }
 
+    &__title{
+        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 85%, 0 100%);
+    }
+
     &__image{
-        width: 714px;
-        height: 532px;
+        @include image-block-parameters(714px, 532px);
     }
 }

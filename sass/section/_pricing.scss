@@ -11,6 +11,10 @@
     text-align: center;
     margin-bottom: 60px;
   }
+
+  &__title{
+    @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 30%, 70% 100%);
+  }
   
   &__cards {
     display: flex;
