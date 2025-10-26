@@ -1,25 +1,44 @@
+@use './variables' as *; // Import global variables
 
-@use '../base/variables' as *;
+// ==============================
+// 📏 Typography Mixins
+// ==============================
 
-@mixin size-weight($size, $weight){
+/// Sets both font size and weight.
+/// @param {Number} $size - Font size
+/// @param {Number} $weight - Font weight
+@mixin size-weight($size, $weight) {
   font-size: $size;
   font-weight: $weight;
 }
 
-@mixin arrow-menu{
-      &::after{
-      position: absolute;
-      content: '';
-      top: 50%;
-      right: 5px;
-      width: 13px;
-      height: 6px;
-      color: $secondaryWhite;
-      background: url('../assets/icon/arrow-down-white.svg') center / contain no-repeat;
-      transform: translateY(-50%);
-    }
+// ==============================
+// Arrow / Dropdown Indicator
+// ==============================
+
+/// Adds a small arrow icon (using ::after).
+/// Commonly used for dropdown menus or buttons.
+@mixin arrow-menu {
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 5px;
+    width: 13px;
+    height: 6px;
+    color: $secondaryWhite;
+    background: url('../assets/icon/arrow/arrow-down-white.svg') center / contain no-repeat;
+    transform: translateY(-50%);
+  }
 }
 
+// ==============================
+// Layout / Flexbox Mixins
+// ==============================
+
+/// Creates a flex container that centers items vertically
+/// and spaces them evenly across the main axis.
+/// @param {Number} $gap - Space between elements
 @mixin flex-center-between($gap) {
   display: flex;
   flex-wrap: nowrap;
@@ -28,49 +47,86 @@
   gap: $gap;
 }
 
-@mixin checked ($url) {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-    position: relative;
-    padding-left: 37px;
+// ==============================
+// Checked Item (with Icon)
+// ==============================
 
-    &::before{
-      position: absolute;
-      content: '';
-      top: 50%;
-      left: 0;
-      width: 20px;
-      height: 18px;
-      background: $url;
-      transform: translateY(-50%);
-    }
-}
-
-@mixin underline-bg($background-url, $background-size, $background-position){
-    background: $background-url;
-    background-size: $background-size;
-    background-position: $background-position
-}
-
-@mixin bg-element( $top, $left, $width, $height, $backgraound-url){
+/// Adds a custom icon (via ::before) before text or list items.
+/// Useful for styled checkmarks, bullet points, etc.
+/// @param {String} $url - URL of the icon
+@mixin checked($url) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
   position: relative;
+  padding-left: 37px;
 
-  &::before{
-  position: absolute;
-  content: '';
-  display: block;
-  top: $top;
-  left: $left;
-  width: $width;
-  height: $height;
-  background: $backgraound-url;
-  z-index: 0;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 18px;
+    background: $url;
+    transform: translateY(-50%);
   }
 }
 
-@mixin image-block-parameters($max-width, $height){
-    max-width: $max-width;
+// ==============================
+// Background / Decoration Mixins
+// ==============================
+
+/// Adds a decorative background (e.g. an underline image or line).
+/// @param {String} $background-url - Background image URL
+/// @param {String} $background-size - Background size
+/// @param {String} $background-position - Background position
+@mixin underline-bg($background-url, $background-size, $background-position) {
+  background: $background-url;
+  background-size: $background-size;
+  background-position: $background-position;
+}
+
+/// Adds a decorative element via ::before with custom position and image.
+/// Often used for visual accents in sections.
+/// @param {Number} $top - Top offset
+/// @param {Number} $left - Left offset
+/// @param {String} $background-url - Background image URL
+/// @param {String} $background-size - Background size
+@mixin bg-element($top, $left, $background-url, $background-size) {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: $top;
+    left: $left;
     width: 100%;
-    height: $height;
+    height: 100%;
+    background: $background-url;
+    background-size: $background-size;
+    z-index: 0;
+  }
+}
+
+// ==============================
+//Image / Block Mixins
+// ==============================
+
+/// Defines a responsive image block with max width and fixed height.
+/// @param {Number} $max-width - Maximum width
+/// @param {Number} $height - Height
+@mixin image-block-parameters($max-width, $height) {
+  max-width: $max-width;
+  width: 100%;
+  height: $height;
+}
+
+/// Defines flex properties (shrink/grow/basis) and height.
+/// @param {List} $flex - Flex shorthand (e.g. 0 0 auto)
+/// @param {Number} $height - Element height
+@mixin shink-grow-height($flex, $height) {
+  flex: $flex;
+  height: $height;
 }

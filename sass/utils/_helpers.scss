@@ -1,35 +1,35 @@
+@use '../base/variables' as *; // Import project variables
+@use "sass:map";                // Import Sass map utilities
 
-@use '../base/variables' as *;
-
-.color-white{
+// White text color
+.color-white {
   color: $secondaryWhite;
 }
 
-.color-dark{
+// Dark text color
+.color-dark {
   color: $secondaryBlack;
 }
 
-.padding-140{
+// Padding top and bottom 140px
+.padding-140 {
   padding-top: 140px;
   padding-bottom: 140px;
 }
 
-.mr-60px{
- margin-right: 60px;
-}
-
-.mr-100px{
-  margin-right: 110px;
-}
-
-.mr-18px{
-  margin-right: 18px;
-}
-
-.ml-auto{
+// Margin-left auto (for alignment/flex spacing)
+.ml-auto {
   margin-left: auto;
 }
 
-.row-reverse{
-  flex-direction: row-reverse;
+// =========================================================
+// MEDIA QUERIES
+// =========================================================
+
+// ---------- SM (≤ 320px) ----------
+@media (max-width: map.get($breakpoints, sm)) {
+  .padding-140 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }

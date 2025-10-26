@@ -1,23 +1,27 @@
+@use '../base/variables' as *; // Import project variables
+@use '../base/mixin' as *;     // Import reusable mixins
+@use "sass:map";               // Import map functions (for breakpoints)
 
-@use '../base/variables' as *;
-@use '../base/mixin' as *;
-@use "sass:map";
-
+// =======================================
+// Hero Section Styles
+// =======================================
 .hero {
   background: url('../assets/img/hero/hero-bg.png') center / 100% no-repeat;
   background-color: $primaryDark;
 
-  &__title{
+  &__title {
     @include size-weight($H2FontSize, 700);
   }
 
-  &__image{
+  &__image {
     @include image-block-parameters(824px, 549px);
   }
 }
 
+// =======================================
+// Generic Block Styles (used in hero, work-management, etc.)
+// =======================================
 .block {
-
   &__container {
     display: flex;
     align-items: center;
@@ -26,7 +30,6 @@
 
   &__info {
     margin-right: 18px;
-    flex: 1 1 auto;
     z-index: 2;
   }
 
@@ -34,34 +37,86 @@
     margin-bottom: 30px;
   }
 
-  &__text {
+  &__description {
     margin-bottom: 60px;
   }
 
   &__button {
   }
-    
+
   &__image {
     background-color: $secondaryBlue;
   }
 
-  &__img{
+  &__img {
     width: 100%;
   }
 }
 
+// =========================================================
+// MEDIA QUERIES
+// =========================================================
+
+// ---------- XL (≤ 1400px) ----------
 @media (max-width: map.get($breakpoints, xl)) {
-  .hero{
-    &__image{
-      @include image-block-parameters(685px, 456px);
-  }
+  .hero__image {
+    @include image-block-parameters(685px, 456px);
   }
 }
 
+// ---------- LG (≤ 1152px) ----------
 @media (max-width: map.get($breakpoints, lg)) {
-  .hero{
-    &__image{
-      @include image-block-parameters(526px, 350px);
+  .hero__image {
+    @include image-block-parameters(526px, 350px);
   }
+}
+
+// ---------- PLUS-MD (≤ 992px) ----------
+@media (max-width: map.get($breakpoints, plus-md)) {
+  .hero__image {
+    @include image-block-parameters(600px, 500px);
+  }
+
+  .block {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      gap: 100px;
+    }
+
+    &__info {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    &__button {
+      margin: 0 auto;
+    }
+  }
+}
+
+// ---------- MD (≤ 768px) ----------
+@media (max-width: map.get($breakpoints, md)) {
+  .hero__image {
+    @include image-block-parameters(551px, 367px);
+    margin: 0 auto;
+  }
+
+  .block__title {
+    @include size-weight($H3FontSize, 700);
+  }
+}
+
+// ---------- SM (≤ 320px) ----------
+@media (max-width: map.get($breakpoints, sm)) {
+  .hero__image {
+    @include image-block-parameters(286px, 191px);
+    margin: 0 auto;
+  }
+
+  .block {
+    &__title {
+      @include size-weight($H4FontSize, 700);
+    }
   }
 }

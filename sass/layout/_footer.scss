@@ -1,159 +1,239 @@
+@use '../base/variables' as *; // Import variables
+@use '../base/mixin' as *;     // Import mixins
+@use "sass:map";               // Import map functions
 
-@use '../base/variables' as *;
-@use '../base/mixin' as *;
-@use "sass:map";
-
-
+// =======================================
+// Footer Section Styles
+// =======================================
 .footer {
-    background-color: $primaryDark;
-    color: $secondaryWhite;
+  background-color: $primaryDark;
+  color: $secondaryWhite;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
     padding-top: 140px;
     padding-bottom: 32px;
-		&__container {
-            display: flex;
-            flex-direction: column;
-		}
+  }
 
-		&__body {
-            display: flex;
-            gap: 100px;
-            margin-bottom: 67px;
-		}
+  &__body {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 67px;
+  }
+ 
+  &__logo {}
 
-		&__logo {
-            
-		}
+  &__logo-link {}
 
-        &__logo-link{
-            
-        }
+  &__image {
+    width: 191px;
+    height: 34px;
+    margin-bottom: 15px;
+  }
 
-		&__image {
-            width: 191px;
-            height: 34px;
-            margin-bottom: 15px;
-		}
+  &__text {
+    @include size-weight($fontSize, 400);
+    max-width: 240px;
+    line-height: $lineHeight;
+    margin-bottom: 23px;
+  }
+ 
+  &__navigation {
+    width: 205px;
+  }
 
-		&__text {
-            @include size-weight($fontSize, 400);
-            max-width: 240px;
-            line-height: $lineHeight;
-            margin-bottom: 23px;
-		}
+  &__navigation-title {
+    @include size-weight($fontSize, 700);
+    margin-bottom: 16px;
+  }
 
-		&__navigation {
-            width: 205px;
-		}
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-        &__navigation-title{
-            @include size-weight($fontSize, 700);
-            margin-bottom: 16px;
+  &__item {}
 
-        }
+  &__link {
+    @include size-weight($H6FontSize, 400);
+    line-height: $ParagraphP3RegularLineHeight;
+    color: $secondaryWhite;
+  }
 
-		&__list-product {
-		}
+  &__try {
+    width: 259px;
+    @include size-weight($H5FontSize, 700);
+    line-height: $ParagraphP1SemiBoldLineHeight;
+    margin-left: auto;
+  }
 
-		&__item {
-		}
+  &__try-title {
+    margin-bottom: 23px;
+  }
 
-        &__link{
-            @include size-weight($H6FontSize, 400);
-            line-height: $ParagraphP3RegularLineHeight;
-            color: $secondaryWhite;
-        }
+  &__try-text {
+    @include size-weight($H6FontSize, 400);
+    margin-bottom: 23px;
+  }
 
-		&__list-resources {
-		}
+  &__try-button {}
 
-		&__list-company {
-		}
+  &__line {
+    position: relative;
+    margin-bottom: 32px;
 
-		&__try {
-                  width: 259px;
-                  @include size-weight($H5FontSize, 700);
-                  line-height: $ParagraphP1SemiBoldLineHeight;
-		}
-
-		&__try-title {
-                  margin-bottom: 23px;
-		}
-
-            &__try-text{
-                  @include size-weight($H6FontSize, 400);
-                  margin-bottom: 23px;
-            }
-
-            &__try-button{
-            }
-
-		&__line {
-            position: relative;
-            margin-bottom: 32px;
-
-            &::after{
-                position: absolute;
-                content: '';
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 1px;
-                background-color: $secondaryDark;
-            }
-		}
-
-		&__copy-rigth {
-              display: flex;
-              justify-content: space-between;
-		}
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $secondaryDark;
+    }
+  }
+ 
+  &__copy-rigth {
+    display: flex;
+  }
 }
 
+//copy-right
 .copy-right {
+  &__navigation {}
+  
+  &__list {
+    display: flex;
+    gap: 60px;
+  }
 
-      &__navigation {
-      }
+  &__link {
+    @include size-weight($H6FontSize, 400);
+  }
 
-      &__list {
-       display: flex;
-        gap: 60px;
-      }
+  &__item {}
 
-      &__link {
-            @include size-weight($H6FontSize, 400);
-      } 
+  &__english {
+    position: relative;
+    padding-right: 34px;
+    padding-left: 30px;
+    @include arrow-menu();
 
-      &__item {
-      }
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      width: 19px;
+      height: 19px;
+      background: url('../assets/icon/footer/earth-icon/earth-icon.svg') center / contain no-repeat;
+      transform: translateY(-50%);
+    }
+  }
 
-      &__english {
-        display: block;
-        position: relative;
-        padding-right: 34px;
-        padding-left: 30px;
-        @include arrow-menu();
-        &::before{
-          position: absolute;
-          content: '';
-          top: 50%;
-          left: 0;
-          width: 19px;
-          height: 19px;
-          background: url('../assets/icon/footer/earth-icon/earth-icon.svg') center / contain no-repeat;
-          transform: translateY(-50%);
-        }
-      }
+  &__social {
+    display: flex;
+    gap: 32px;
+    margin-left: auto;
+  }
 
-      &__social {
-        display: flex;
-        gap: 32px;
-      }
-
-      &__icons {
-      }
+  &__icons {}
 }
 
-@media (max-width: map.get($breakpoints, lg)) {
+// =========================================================
+// MEDIA QUERIES
+// =========================================================
+
+// ---------- XL (≤ 1400px) ----------
+@media (max-width: map.get($breakpoints, xl)) {
   .copy-right__list {
-    gap: 20px;
+    gap: 40px;
+  }
+}
+
+// ---------- LG (≤ 1152px) ----------
+@media (max-width: map.get($breakpoints, lg)) {
+  .footer {
+    &__body {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    &__try {
+      margin: 0;
+    }
+  }
+
+  .copy-right__list {
+    gap: 10px;
+  }
+}
+
+// ---------- MD (≤ 768px) ----------
+@media (max-width: map.get($breakpoints, md)) {
+  .footer {
+    &__container {
+      padding-top: 80px;
+    }
+
+    &__body {
+      flex-direction: column;
+      gap: 100px;
+    }
+
+    &__copy-rigth {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  .copy-right {
+    &__list {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    &__social {
+      margin: 0;
+    }
+  }
+}
+
+// ---------- SM (≤ 320px) ----------
+@media (max-width: map.get($breakpoints, sm)) {
+  .footer {
+    &__container {
+      padding-top: 80px;
+    }
+
+    &__body {
+      text-align: center;
+      gap: 100px;
+      margin: 0 auto;
+    }
+
+    &__logo,
+    &__navigation,
+    &__try-button {
+      margin: 0 auto;
+    }
+
+    &__copy-rigth {
+      flex-direction: column;
+    }
+  }
+
+  .copy-right {
+    &__list {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    &__social {
+      margin: 0 auto;
+    }
   }
 }

@@ -1,63 +1,72 @@
+@use '../base/variables' as *; // Import variables
+@use '../base/mixin' as *;     // Import mixins
+@use "sass:map";               // Import map functions
 
-@use '../base/variables' as *;
-@use '../base/mixin' as *;
-@use "sass:map";
-
-
-.btn{
+// =======================================
+// Button Section Styles
+// =======================================
+.btn {
   padding-left: 40px;
   padding-right: 40px;
   font-size: $ParagraphP2MediumFontSize;
   line-height: $ParagraphP2MediumLineHeight;
   border: none;
   border-radius: 8px;
+  white-space: nowrap;
 
-  &--small{
+  //small size
+  &--small {
     padding-top: 16px;
-    padding-bottom: 16px;    
+    padding-bottom: 16px;
   }
-  
+
+  //medium size
   &--medium {
     padding-top: 18.5px;
     padding-bottom: 18.5px;
   }
 
-  &--large{
+  //large size
+  &--large {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-
-  &--yellow{
+  //yellow color
+  &--yellow {
     background-color: $secondaryYellow;
     color: $primaryDark;
   }
 
-  &--border-yellow{
+  //border yellow color
+  &--border-yellow {
     background-color: $secondaryWhite;
     color: $secondaryBlack;
     border: 1px solid $secondaryYellow;
   }
 
-  &--blue{
+  //blue color
+  &--blue {
     background-color: $primaryLight;
     color: $secondaryWhite;
   }
 
-  &--arrow{
+  //arrow button
+  &--arrow {
     display: flex;
     align-items: center;
-    &::after{
+
+    &::after {
       content: '';
       display: block;
       width: 12px;
       height: 12px;
       margin-left: 18px;
-      background: url('../assets/icon/arrow-right-for-button.svg') center / contain no-repeat;
+      background: url('../assets/icon/arrow/arrow-right-for-button.svg') center / contain no-repeat;
     }
   }
 
-  &:hover{
+  &:hover {
     opacity: 0.8;
     transition: opacity 1s ease;
   }

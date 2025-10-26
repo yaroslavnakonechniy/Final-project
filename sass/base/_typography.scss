@@ -1,48 +1,43 @@
-
 @font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter/Inter-Regular.eot');
-    src: url('../fonts/Inter/Inter-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Inter/Inter-Regular.woff2') format('woff2'),
-        url('../fonts/Inter/Inter-Regular.woff') format('woff'),
-        url('../fonts/Inter/Inter-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/Inter/regular/Inter-Regular.eot'), /* IE9 Compat Modes */
+       url('../fonts/Inter/regular/Inter-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Inter/regular/Inter-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Inter/regular/Inter-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url("../fonts/Inter/regular/Inter-Regular.otf") format("opentype"); /* OTF/TTF are often used as fallbacks for older or less-supported browsers */
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter/Inter-Italic.eot');
-    src: url('../fonts/Inter/Inter-Italic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Inter/Inter-Italic.woff2') format('woff2'),
-        url('../fonts/Inter/Inter-Italic.woff') format('woff'),
-        url('../fonts/Inter/Inter-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../fonts/Inter/medium/Inter-Medium.eot'), /* IE9 Compat Modes */
+       url('../fonts/Inter/medium/Inter-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Inter/medium/Inter-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Inter/medium/Inter-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+       url("../fonts/Inter/medium/Inter-Medium.otf") format("opentype"); /* OTF/TTF are often used as fallbacks for older or less-supported browsers */
 }
 
 @font-face {
-    font-family: 'DM Sans 9pt';
-    src: url('../fonts/Dm/DMSans-9ptItalic.eot');
-    src: url('../fonts/Dm/DMSans-9ptItalic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Dm/DMSans-9ptItalic.woff2') format('woff2'),
-        url('../fonts/Dm/DMSans-9ptItalic.woff') format('woff'),
-        url('../fonts/Dm/DMSans-9ptItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+  font-family: 'Inter';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../fonts/Inter/semibold/Inter-SemiBold.eot'), /* IE9 Compat Modes */
+       url('../fonts/Inter/semibold/Inter-SemiBold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Inter/semibold/Inter-SemiBold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Inter/semibold/Inter-SemiBold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url("../fonts/Inter/semibold/Inter-SemiBold.otf") format("opentype"); /* OTF/TTF are often used as fallbacks for older or less-supported browsers */
 }
 
 @font-face {
-    font-family: 'DM Sans 9pt';
-    src: url('../fonts/Dm/DMSans-9ptRegular.eot');
-    src: url('../fonts/Dm/DMSans-9ptRegular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Dm/DMSans-9ptRegular.woff2') format('woff2'),
-        url('../fonts/Dm/DMSans-9ptRegular.woff') format('woff'),
-        url('../fonts/Dm/DMSans-9ptRegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/Inter/bold/Inter-Bold.eot'), /* IE9 Compat Modes */
+       url('../fonts/Inter/bold/Inter-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Inter/bold/Inter-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Inter/bold/Inter-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url("../fonts/Inter/bold/Inter-Bold.otf") format("opentype"); /* OTF/TTF are often used as fallbacks for older or less-supported browsers */
 }

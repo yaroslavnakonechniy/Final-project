@@ -1,55 +1,95 @@
+@use './variables' as *; // Import global variables
+@use './mixin' as *;     // Import reusable mixins
+@use "sass:map";         // Import Sass map utilities
 
-@use '../base/variables' as *;
-@use '../base/mixin' as *;
-@use "sass:map";
+// ==============================
+// Global Typography & Base Styles
+// ==============================
 
+// Default body text styling
+body {
+  font-family: $inter;            // Main site font
+  font-size: $fontSize;           // Base font size
+  font-weight: 400;               // Regular weight
+  line-height: $lineHeight;       // Default line height
+  letter-spacing: $letterSpacing; // Consistent letter spacing
+}
 
+// ==============================
+// Headings
+// ==============================
 
+// Main page title
+h1 {
+  @include size-weight($H1FontSize, 700); // Use mixin for size + bold weight
+  line-height: $H1LineHeight;
+  letter-spacing: $letterSpacing;
+}
 
-body{
-  font-family: $inter;
-  font-size: $fontSize;
-  font-weight: 400;
+// Section title
+h2 {
+  @include size-weight($H2FontSize, 700); // Slightly smaller than h1
+  line-height: $H2LineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+// ==============================
+// Paragraphs
+// ==============================
+
+p {
+  @include size-weight($fontSize, 400);   // Normal text
   line-height: $lineHeight;
   letter-spacing: $letterSpacing;
 }
 
-h1{
-  @include size-weight($H1FontSize, 700);
-  line-height:$H1LineHeight;
-  letter-spacing: $letterSpacing;
-}
-
-h2{
-  @include size-weight($H2FontSize, 700);
-  line-height:$H2LineHeight;
-  letter-spacing: $letterSpacing;
-}
-
-p{
-  @include size-weight($fontSize, 400);
-  line-height: $lineHeight;
-  letter-spacing: $letterSpacing;
-}
+// ==============================
+// Links
+// ==============================
 
 a {
-  text-decoration: none;
+  text-decoration: none; 
+
+  &:hover {
+    cursor: pointer;     
+  }
 }
 
-a:hover {
-  cursor: pointer;
-}
+// ==============================
+// Buttons
+// ==============================
 
 button {
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  // Hover effect with smooth transitions
+  &:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 1s ease, transform 2s ease;
+  }
+
+  // Click/active state
+  &:active {
+    transform: scale(0.9); // Slight shrink on click
+  }
 }
 
-button:hover {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  transition: background-color 1s ease, transform 2s ease;
+// =========================================================
+// MEDIA QUERIES
+// =========================================================
+
+// ---------- MD (≤ 768px) ----------
+@media (max-width: map.get($breakpoints, md)) {
+  h1,
+  h2 {
+    @include size-weight($H3FontSize, 700);
+  }
 }
 
-button:active {
-  transform: scale(0.55);
+// ---------- SM (≤ 320px) ----------
+@media (max-width: map.get($breakpoints, sm)) {
+  h1,
+  h2 {
+    @include size-weight($H4FontSize, 700);
+  }
 }

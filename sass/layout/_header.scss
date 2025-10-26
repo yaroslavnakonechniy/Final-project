@@ -1,12 +1,13 @@
+@use '../base/variables' as *; // Import variables
+@use '../base/mixin' as *;     // Import mixins
+@use "sass:map";               // Import map functions
 
-@use '../base/variables' as *;
-@use '../base/mixin' as *;
-@use "sass:map";
-
-
+// =======================================
+// Header Section Styles
+// =======================================
 .header {
   background-color: $primaryDark;
-  
+
   &__container {
     display: flex;
     align-items: center;
@@ -32,13 +33,15 @@
   }
 }
 
+//logo
 .logo {
-  &__img{
+  &__img {
     width: 191px;
     height: 34px;
   }
 }
 
+//list
 .list {
   &__item {
     display: flex;
@@ -55,59 +58,118 @@
     color: $secondaryWhite;
     @include arrow-menu();
 
-    &:hover::after{
+    &:hover::after {
       transform: scale(1.1);
     }
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }
 }
 
-.burger__menu{
-
+//burger-menu
+.burger__menu {
   display: none;
-  padding-left: 40px;
-  margin-left: 20px;
   position: relative;
-  &::after,&::before,span{
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      width: 42px;
-      height: 2px;
-      background: $secondaryWhite;
+  width: 42px;
+  height: 34px;
+  cursor: pointer;
+  margin-left: 20px;
+
+  span,
+  span::before,
+  span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $secondaryWhite;
+    border-radius: 2px;
+    transition: all 0.3s ease;
   }
 
-  &::after{
-      top: 12px;
-      left: 0;
+  span {
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  &::before{
-      top: -12px;
-      left: 0;
+  span::before {
+    top: -13px;
+  }
+
+  span::after {
+    top: 13px;
+  }
+
+  .burger__checkbox {
+    display: none;
+
+    &:checked ~ span {
+      background: transparent;
+    }
+
+    &:checked ~ span::before {
+      transform: translateY(13px) rotate(45deg);
+    }
+
+    &:checked ~ span::after {
+      transform: translateY(-13px) rotate(-45deg);
+    }
   }
 }
 
+// =========================================================
+// MEDIA QUERIES
+// =========================================================
+
+// ---------- XL (≤ 1400px) ----------
 @media (max-width: map.get($breakpoints, xl)) {
-  .header__navigation{
-    margin-right: 40px;
+  .header__navigation {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .list__item {
+    gap: 20px;
   }
 }
 
+// ---------- LG (≤ 1152px) ----------
 @media (max-width: map.get($breakpoints, lg)) {
-  .header{
-    &__navigation{
+  .header {
+    &__navigation {
       display: none;
     }
-    &__buttons{
+
+    &__buttons {
       margin-left: auto;
     }
   }
-  .burger__menu{
+
+  .burger__menu {
     display: block;
+  }
+}
+
+// ---------- MD (≤ 768px) ----------
+@media (max-width: map.get($breakpoints, md)) {
+  .header__buttons {
+    display: none;
+  }
+
+  .burger__menu {
+    margin-left: auto;
+  }
+}
+
+// ---------- SM (≤ 320px) ----------
+@media (max-width: map.get($breakpoints, md)) {
+  .logo {
+    &__img {
+      width: 133px;
+      height: 24px;
+    }
   }
 }

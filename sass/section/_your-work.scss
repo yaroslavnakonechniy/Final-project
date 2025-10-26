@@ -1,56 +1,135 @@
+@use '../base/variables' as *; // Import variables
+@use '../base/mixin' as *;     // Import mixins
+@use 'sass:map';               // Import Sass map utilities
 
-@use '../base/variables' as *;
-@use '../base/mixin' as *;
-@use "sass:map";
-
+// =========================================================
+// SECTION: Your-work
+// Description: Styles for your-work cards and layout
+// =========================================================
 .your-work {
-    background-color: $primaryDark;
+  background-color: $primaryDark;
+  @include bg-element(
+    -10%, 
+    -40%,
+    url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / cover no-repeat,
+    28%
+  );
 
-    &__container{
-        display: block;
-        place-items: center;
-        @include bg-element(-110%, -18%, 700px, 781px, url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / contain no-repeat);
-    }
+  &__container {
+    display: block;
+    place-items: center;
+  }
 
-    &__body{
-        text-align: center;
-        width: 1064px;
-    }
+  &__body {
+    text-align: center;
+    width: 1064px;
+  }
 
-    &__title{
-        @include underline-bg(url('../assets/img/bg-line/blue-bg-line.png') no-repeat, 25%, 95% 100%);
-    }
+  &__title {
+    position: relative;
+    z-index: 0;
 
-    &__button{
-        margin: 0 auto;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../assets/img/bg-line/blue-bg-line.png') no-repeat;
+      background-position: 100% 105%;
+      z-index: -1;
     }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
 }
 
+// =========================================================
+// MEDIA QUERIES
+// =========================================================
+
+// ---------- XL (≤ 1400px) ----------
 @media (max-width: map.get($breakpoints, xl)) {
-    .your-work__container{
-        @include bg-element(-110%, -28%, 700px, 781px, url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / contain no-repeat);
-    }
+  .your-work {
+    @include bg-element(
+      -10%, 
+      -50%,
+      url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / cover no-repeat,
+      28%
+    );
+  }
 }
 
+// ---------- LG (≤ 1152px) ----------
 @media (max-width: map.get($breakpoints, lg)) {
-  .your-work{
+  .your-work {
+    @include bg-element(
+      -10%, 
+      -40%,
+      url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / cover no-repeat,
+      28%
+    );
 
-    &__container{
-        place-items: start;
-        @include bg-element(-110%, -100%, 700px, 781px, url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / contain no-repeat);
+    &__container {
+      place-items: start;
     }
 
     &__body {
-        width: 650px;
-        text-align: left;
+      max-width: 650px;
+      text-align: left;
     }
 
-    &__title{
-        @include underline-bg(url('../assets/img/bg-line/blue-bg-line.png') no-repeat, 45% 30%, 95% 100%);
+    &__button {
+      margin: 0;
+    }
+  }
+}
+
+// ---------- MD (≤ 768px) ----------
+@media (max-width: map.get($breakpoints, md)) {
+  .your-work {
+    @include bg-element(
+      -10%, 
+      -40%,
+      url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / cover no-repeat,
+      35%
+    );
+
+    &__body {
+      width: 100%;
+      text-align: left;
     }
 
-    &__button{
-        margin: 0 ;
+    &__title {
+      &::after {
+        background-position: 100% 60%;
+      }
+    }
+  }
+}
+
+// ---------- SM (≤ 320px) ----------
+@media (max-width: map.get($breakpoints, sm)) {
+  .your-work {
+    @include bg-element(
+      -35%, 
+      -40%,
+      url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / cover no-repeat,
+      60%
+    );
+
+    &__body {
+      width: 100%;
+      text-align: left;
+    }
+
+    &__title {
+      &::after {
+        background-position: 100% 60%;
+      }
     }
   }
 }

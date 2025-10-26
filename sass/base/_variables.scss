@@ -1,4 +1,3 @@
-
 // === Primary colors ===
 $primaryDark: #043873;
 $primaryLight: #4F9CF9;
@@ -20,30 +19,28 @@ $lineHeight: 1.66666667;
 $letterSpacing: -0.02rem;
 
 // === Font Size ===
-$H1FontSize: 4rem;                  //72px
-$H2FontSize: 3.555555556rem;        //64px
-$H3FontSize: 3rem;                  //54px 
-$H4FontSize: 2rem;                  //36px
-$H5FontSize: 1.555555556rem;        //28px
-$H6FontSize: 0.8888888888888889rem; //16px
+$H1FontSize: 4rem;                   // 72px
+$H2FontSize: 3.555555556rem;         // 64px
+$H3FontSize: 3rem;                   // 54px
+$H4FontSize: 2rem;                   // 36px
+$H5FontSize: 1.555555556rem;         // 28px
+$H6FontSize: 0.8888888889rem;        // 16px
 
-//=== Line Hegiht ===
+// === Line Height ===
 $H1LineHeight: 1.2;
 $H2LineHeight: 1.2;
 $H3LineHeight: auto;
 $H4LineHeight: auto;
 $H5LineHeight: 2;
 
-// === Paragraph P1===
-// === Font size ===
+// === Paragraph P1 ===
 $ParagraphP1SemiBoldFontSize: 1.333333333rem;
 $ParagraphP1RegularFontSize: 1.333333333rem;
 
 $ParagraphP1SemiBoldLineHeight: 2;
 $ParagraphP1RegularLineHeight: 1.77777778;
 
-// === Paragraph P2===
-// === Font size ===
+// === Paragraph P2 ===
 $ParagraphP2SemiBoldFontSize: 1rem;
 $ParagraphP2MediumFontSize: 1rem;
 $ParagraphP2RegularFontSize: $fontSize;
@@ -52,20 +49,20 @@ $ParagraphP2SemiBoldLineHeight: auto;
 $ParagraphP2MediumLineHeight: 1.277777778;
 $ParagraphP2RegularLineHeight: $lineHeight;
 
-// === Paragraph P3===
-// === Font size ===
-$ParagraphP3MediumFonteSize: 0.8888888893rem;
-$ParagraphP3RegularFonteSize: 0.888888889rem;
+// === Paragraph P3 ===
+$ParagraphP3MediumFontSize: 0.8888888893rem;
+$ParagraphP3RegularFontSize: 0.888888889rem;
 
 $ParagraphP3MediumLineHeight: auto;
 $ParagraphP3RegularLineHeight: 1.111111111;
 
-
 // === Breakpoints ===
 $breakpoints: (
-    xs: 0,
-    sm: 320px,
-    md: 768px,
-    lg: 1152px,
-    xl: 1400px,
+  xs: 0,
+  sm: 320px,
+  custom-sm: 567px,
+  md: 768px,
+  plus-md: 992px,
+  lg: 1152px,
+  xl: 1400px,
 );
