@@ -1,38 +1,137 @@
-@use '../base/variables' as *;
-@use '../base/mixin' as *;
-@use "sass:map";
+@use '../base/variables' as *; // Import variables
+@use '../base/mixin' as *;     // Import mixins
+@use "sass:map";               // Import map functions for breakpoints
 
+// =======================================
+// Customize Section Styles
+// =======================================
 .customize {
-    
-    &__container{
-        color: $secondaryBlack;
-    }
+  &__container {
+    color: $secondaryBlack;
+  }
 
-    &__title{
-        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 85%, 0 100%);
-    }
+  &__block {
+    flex-direction: row-reverse;
+  }
 
-    &__image{
-        @include image-block-parameters(714px, 532px);
+  &__title {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -5%;
+      width: 100%;
+      height: 100%;
+      background: url('../assets/img/bg-line/bg-line-main.png') no-repeat;
+      background-position: 20% 105%;
+      background-size: 60%;
+      z-index: -1;
     }
+  }
+
+  &__image {
+    @include image-block-parameters(714px, 532px);
+    margin-right: 100px;
+  }
 }
 
+// =========================================================
+// MEDIA QUERIES
+// =========================================================
+
+// ---------- XL (≤ 1400px) ----------
 @media (max-width: map.get($breakpoints, xl)) {
-  .customize{
-    &__image{
-      @include image-block-parameters(670px, 499px);
+  .customize {
+    &__title {
+      &::after {
+        background: url('../assets/img/bg-line/bg-line-md.png') no-repeat;
+        background-position: 20% 105%;
+      }
+    }
+
+    &__image {
+      @include shink-grow-height(0 0 670px, 499px);
     }
   }
 }
 
+// ---------- LG (≤ 1152px) ----------
 @media (max-width: map.get($breakpoints, lg)) {
-  .customize{
-    &__image{
-      @include image-block-parameters(534px, 397px);
+  .customize {
+    &__title {
+      &::after {
+        background-size: 90%;
+      }
     }
-    
-    &__title{
-        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 85% 50%, 0 100%);
+
+    &__image {
+      @include image-block-parameters(534px, 397px);
+      flex: none;
+    }
+  }
+}
+
+// ---------- PLUS-MD (≤ 992px) ----------
+@media (max-width: map.get($breakpoints, plus-md)) {
+  .customize {
+    &__title {
+      &::after {
+        width: 50%;
+        left: 30%;
+        background-size: 90%;
+      }
+    }
+
+    &__image {
+      @include image-block-parameters(600px, 500px);
+      margin: 0 auto;
+    }
+  }
+}
+
+// ---------- MD (≤ 768px) ----------
+@media (max-width: map.get($breakpoints, md)) {
+  .block__container.customize__block {
+    flex-direction: column-reverse;
+  }
+
+  .customize {
+    &__image {
+      @include image-block-parameters(557px, 388px);
+      margin: 0 auto;
+    }
+
+    &__info {
+      margin: 0 auto;
+    }
+
+    &__container {
+      text-align: center;
+      gap: 100px;
+    }
+  }
+}
+
+// ---------- SM (≤ 320px) ----------
+@media (max-width: map.get($breakpoints, sm)) {
+  .customize {
+    &__title {
+      &::after {
+        width: 70%;
+        left: 20%;
+        background-size: 90%;
+      }
+    }
+
+    &__image {
+      @include image-block-parameters(284px, 198px);
+    }
+
+    &__reverse {
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
 }

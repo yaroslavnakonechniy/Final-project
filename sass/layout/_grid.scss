@@ -1,22 +1,29 @@
+@use '../base/variables' as *; // Import variables
+@use '../base/mixin' as *;     // Import mixins
+@use "sass:map";               // Import map functions
 
-@use '../base/variables' as *;
-@use '../base/mixin' as *;
-@use "sass:map";
-
-.container{
+// =======================================
+// Container Styles
+// =======================================
+.container {
   max-width: 1544px;
   margin: 0 auto;
   padding: 0 32px;
 }
 
-@media (max-width: map.get($breakpoints, xl)) {
-  .container{
-    max-width: 1376px;
+// =========================================================
+// MEDIA QUERIES
+// =========================================================
+
+// ---------- MD (≤ 768px) ----------
+@media (max-width: map.get($breakpoints, md)) {
+  .container {
+    padding: 0 20px;
   }
 }
-
-@media (max-width: map.get($breakpoints, lg)) {
-  .container{
-    max-width: 1088px;
+// ---------- SM (≤ 320px) ----------
+@media (max-width: map.get($breakpoints, sm)) {
+  .container {
+    padding: 0 16px;
   }
 }

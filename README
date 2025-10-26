@@ -1,0 +1,139 @@
+1. Project Overview
+
+This project is a responsive web interface built using HTML, SCSS (Sass), and modular design principles. The main goal is to create a visually appealing, flexible layout that works across desktop and mobile devices.
+
+Key features include:
+    Modular SCSS structure with BEM methodology (block__element--modifier).
+    Fully responsive design using media queries and breakpoints.
+    Use of mixins and helper classes for consistent styling.
+    Interactive UI elements like sliders, cards, buttons, and testimonials.
+
+2. SCSS Structure
+2.1 Base
+
+    variables.scss – defines colors, font sizes, breakpoints, line heights.
+    mixin.scss – reusable SCSS mixins, e.g., size-weight, image-block-parameters, checked.
+
+2.2 Sections
+
+    .hero – Hero section with background and main image.
+    .free-trial – Free trial call-to-action block.
+    .pricing – Pricing cards with active state support.
+    .testimonial – Testimonials section with slider support.
+    .use – "How to use" section with title and image.
+    .our-sponsors – Logos section with responsive image grid.
+    .apps – Apps section displaying app icons and links.
+    .customize – Section describing customization options or features.
+    .work-management – Section explaining workflow or task management.
+    .your-data – Section highlighting user data control or analytics features.
+    .your-work – Section summarizing user's work dashboard or project overview.
+
+
+2.3 Helpers
+
+.color-white, .color-dark – Text color helpers.
+.padding-140 – Top and bottom padding utility.
+.ml-auto – Margin-left auto helper for alignment.
+
+3. Key Implementation Details
+
+BEM Methodology: 
+    Blocks and elements are clearly separated, making it easy to maintain and extend.
+
+Mixins: 
+    Reduce code repetition for font sizes, image sizing, arrows, and checked lists.
+
+Active Classes:
+    Placed directly in component SCSS files, not in helpers, for clarity and maintainability.
+
+Responsive Design:
+    Breakpoints are defined in $breakpoints map and used in @media queries.
+    Mobile-first considerations applied in sections like testimonial and pricing.
+
+Slider & Cards:
+    Use scroll-snap-type for smooth horizontal scrolling.
+    Active states are handled with .active, .active-pricing-card, etc.
+
+4. Running the Project
+4.1 Requirements
+
+    Node.js (>=14)
+
+    npm (>=6)
+
+    Sass compiler
+
+4.2 Installation
+
+Clone the repository:
+
+    git clone <repository-url>
+
+
+Install dependencies:
+
+    npm install
+
+
+Compile SCSS to CSS:
+
+    npm run build-css
+
+
+Or for development with live reload:
+
+    npm run watch-css
+
+4.3 Folder Structure
+
+  /assets
+    /img
+    /icon
+  /css
+    main.css
+    main.css.map
+  /fonts
+    /DM
+    /Inter
+  /sass
+    /base
+      globals.scss
+      index.scss
+      mixin.scss
+      normalize.scss
+      reset.scss
+      typography.scss
+      variables.scss
+    /components
+      buttons.scss
+      index.scss
+    /layout
+      footer.scss
+      grid.scss
+      header.scss
+      index.scss
+    /section
+      apps.scss
+      customize.scss
+      free-trial.scss
+      hero.scss
+      index.scss
+      our-sponsors.scss
+      pricing.scss
+      testimonial.scss
+      use.scss
+      work-managemnt.scss
+      your-data.scss
+      your-work.scss
+    /utils
+      helpers.scss
+      index.scss
+    main.scss
+  index.html
+
+5. Notes & Recommendations
+
+Keep active classes in their component files for clarity.
+Use mixins for consistent design and responsive behavior.
+Always use BEM for new components.
+Test on multiple screen sizes to ensure responsiveness.

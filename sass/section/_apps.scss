@@ -1,25 +1,66 @@
+@use '../base/variables' as *; // Import variables
+@use '../base/mixin' as *;     // Import mixins
+@use "sass:map";               // Import map functions
 
-@use '../base/variables' as *;
-@use '../base/mixin' as *;
-@use "sass:map";
-
-
+// =======================================
+// Apps Section Styles
+// =======================================
 .apps {
   background: url('../assets/img/hero/hero-bg.png') center / 100% no-repeat;
   background-color: $primaryDark;
 
   &__container {
   }
-  
-  &__image{
+
+  &__reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__image {
     @include image-block-parameters(582px, 470px);
     background-color: none;
+    margin-right: 100px;
   }
 }
 
+// =========================================================
+// MEDIA QUERIES
+// =========================================================
+
+// ---------- XL (≤ 1400px) ----------
+@media (max-width: map.get($breakpoints, lg)) {}
+
+// ---------- LG (≤ 1152px) ----------
 @media (max-width: map.get($breakpoints, lg)) {
   .apps__image {
-    @include image-block-parameters(528px, 427px);
-    flex: 0 0 528px;
+    @include shink-grow-height(0 0 528px, 427px);
+  }
+}
+
+// ---------- PLUS-MD (≤ ~992px) ----------
+@media (max-width: map.get($breakpoints, plus-md)) {
+  .apps__image {
+    @include image-block-parameters(600px, 500px);
+    flex: none;
+    margin: 0 auto;
+  }
+}
+
+// ---------- MD (≤ 768px) ----------
+@media (max-width: map.get($breakpoints, md)) {
+  .apps {
+    &__image {
+      @include image-block-parameters(485px, 392px);
+      margin: 0 auto;
+    }
+  }
+}
+
+// ---------- SM (≤ 320px) ----------
+@media (max-width: map.get($breakpoints, sm)) {
+  .apps {
+    &__image {
+      @include image-block-parameters(286px, 231px);
+    }
   }
 }

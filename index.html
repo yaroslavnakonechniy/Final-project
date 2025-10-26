@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+
+    <!-- Header-->
     <header class="header">
         <div class="container">
             <div class="header__container">
+
+                <!-- Logo --> 
                 <div class="header__logo">
                     <a href="#" class="logo">
                         <img class="logo__img" src="./assets/icon/logo/Logo-for-bg-blue.svg" alt="logo">
                     </a>
                 </div>
+
+                <!-- Navigation --> 
                 <nav class="header__navigation ml-auto">
                     <ul class="list">
                         <li class="list__item">
@@ -25,140 +31,167 @@
                         </li>
                     </ul>
                 </nav>
+
+                <!-- Buttons --> 
                 <div class="header__buttons">
                     <button class="btn btn--medium btn--yellow header__button-login">Login</button>
                     <button class="btn btn--medium btn--blue btn--arrow header__button-try">Try Whitepace free</button>
                 </div>
-                <div class="burger__menu">
+
+                <!-- Burger Menu --> 
+                <label class="burger__menu">
+                    <input type="checkbox" class="burger__checkbox">
                     <span></span>
-                </div>
+                </label>
+            
             </div>
         </div>
     </header>
 
+    <!-- Main -->
     <main class="main">
+
+        <!-- Hero  Section --> 
         <section class="hero padding-140">
             <div class="container">
+
+                <!-- Hero Block-->
                 <div class="block__container">
-                    <div class="block__info color-white mr-18px">
+                    <div class="block__info color-white">
                         <h2 class="block__title hero__title">Get More Done with whitepace</h2>
-                        <p class="block__text">Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks</p>
+                        <p class="block__description">Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks</p>
                         <button class="btn btn--large btn--blue btn--arrow block__button">Try Whitepace free</button>
                     </div>
                     <div class="block__image hero__image">
-
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <section class="work padding-140">
+        <!-- Work-management Section --> 
+        <section class="work-management padding-140">
             <div class="container ">
-                <div class="work__container">
+                <div class="work-management__container">
+
+                    <!-- Work-management Block -->
                     <div class="block__container">
-                        <div class="block__info color-dark mr-60px">
-                            <h1 class="block__title work__title-project">Project<br> Management</h1>
-                            <p class="block__text">Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.</p>
-                            <button class="btn btn--large btn--blue btn--arrow ">Get Started</button>
+                        <div class="block__info color-dark work-management__info">
+                            <h1 class="block__title work-management__title-project">Project<br> Management</h1>
+                            <p class="block__description">Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.</p>
+                            <button class="btn btn--large btn--blue btn--arrow block__button">Get Started</button>
                         </div>
-                        <div class="work__image block__image">
-
+                        <div class="work-management__image block__image">
                         </div>
                     </div>
 
-                    <div class="block__container row-reverse">
+                    <!-- Work-management Block -->
+                    <div class="block__container work-management__block">
                         <div class="block__info color-dark">
-                            <h1 class="block__title work__title-together">Work together</h1>
-                            <p class="block__text">With whitepace, share your notes with your colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others.</p>
-                            <button class="btn btn--large btn--blue btn--arrow ">Try it now</button>
+                            <h1 class="block__title work-management__title-together">Work together</h1>
+                            <p class="block__description">With whitepace, share your notes with your colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others.</p>
+                            <button class="btn btn--large btn--blue btn--arrow block__button">Try it now</button>
                         </div>
-                        <div class="block__image-work-together work__image-together mr-100px">
-                            <img class="block__img" src="./assets/img/work/work-together.png" alt="work-together">
+                        <div class="block__image-work-management-together work-management__image-together">
+                            <img class="block__img" src="./assets/img/work/work-together.png" alt="work-management-together">
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- Use Section --> 
         <section class="use padding-140">
             <div class="container">
                 <div class="use__container">
+
+                    <!-- Use Block -->
                     <div class="block__container">
-                        <div class="block__info color-white mr-100px">
+                        <div class="block__info color-white use__info">
                             <h1 class="block__title use__title">Use as Extension</h1>
-                            <p class="block__text">Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.</p>
-                            <button class="btn btn--large btn--blue btn--arrow">Let’s Go</button>
+                            <p class="block__description">Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes.</p>
+                            <button class="btn btn--large btn--blue btn--arrow block__button">Let’s Go</button>
                         </div>
                         <div class="block__image use__image">
-
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
-
+        
+        <!-- Customize Section --> 
         <section class="customize padding-140">
             <div class="container">
                 <div class="customize__container">
-                    <div class="block__container row-reverse">
+
+                    <!-- Customize Block -->
+                    <div class="block__container customize__block">
                         <div class="block__info color-dark">
                             <h1 class="block__title customize__title">Customise it to  <br> your needs</h1>
-                            <p class="block__text">Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API.</p>
-                            <button class="btn btn--large btn--blue btn--arrow">Let’s Go</button>
+                            <p class="block__description">Customise the app with plugins, custom themes and multiple text editors (Rich Text or Markdown). Or create your own scripts and plugins using the Extension API.</p>
+                            <button class="btn btn--large btn--blue btn--arrow block__button">Let’s Go</button>
                         </div>
-                        <div class="block__image customize__image mr-100px">
-
+                        <div class="block__image customize__image">
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- Pricing Section --> 
         <section class="pricing padding-140">
             <div class="container">
                 <div class="pricing__container">
+
+                    <!-- Header Pricing -->
                     <div class="pricing__header">
                         <h1 class="block__title pricing__title">Choose Your Plan</h1>
-                        <p class="block__text">Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the  <br>right plan for you.</p>
+                        <p class="block__description">Whether you want to get organized, keep your personal life on track, or boost workplace productivity, Evernote has the  <br>right plan for you.</p>
                     </div>
 
+                    <!-- Cards Pricing -->
                     <div class="pricing__cards">
+
+                        <!-- Card Pricing -->
                         <div class="pricing__free card">
                             <h4 class="card__title">Free</h4>
-                            
                             <span class="card__pricing">$0</span>
-                            <p class="card__text">Capture ideas and find them quickly</p>
+                            <p class="card__description">Capture ideas and find them quickly</p>
                             <ul class="card__list">
-                                <li class="card__item"><a href="" class="card__link">Sync unlimited devices</a></li>
-                                <li class="card__item"><a href="" class="card__link">10 GB monthly uploads</a></li>
-                                <li class="card__item"><a href="" class="card__link">200 MB max. note size</a></li>
-                                <li class="card__item"><a href="" class="card__link">Customize Home dashboard and access extra widgets</a></li>
-                                <li class="card__item"><a href="" class="card__link">Connect primary Google Calendar account</a></li>
-                                <li class="card__item"><a href="" class="card__link">Add due dates, reminders, and notifications to your tasks</a></li>
+                                <li class="card__item"><a href="#" class="card__link">Sync unlimited devices</a></li>
+                                <li class="card__item"><a href="#" class="card__link">10 GB monthly uploads</a></li>
+                                <li class="card__item"><a href="#" class="card__link">200 MB max. note size</a></li>
+                                <li class="card__item"><a href="#" class="card__link">Customize Home dashboard and access extra widgets</a></li>
+                                <li class="card__item"><a href="#" class="card__link">Connect primary Google Calendar account</a></li>
+                                <li class="card__item"><a href="#" class="card__link">Add due dates, reminders, and notifications to your tasks</a></li>
                             </ul>
                             <button class="btn btn--small btn--border-yellow">Get Started</button>
-                        
                         </div>
 
+                        <!-- Card Pricing -->
                         <div class="pricing__personal active-pricing-card">
                             <h4 class="card__title">Personal</h4>
                             <span class="card__pricing active-pricing-card-price">$11.99</span>
-                            <p class="card__text">Keep home and family on track</p>
+                            <p class="card__description">Keep home and family on track</p>
                             <ul class="card__list">
-                                <li class="card__item active-checked"><a href="" class="card__link active-pricing-card-link">Sync unlimited devices</a></li>
-                                <li class="card__item active-checked"><a href="" class="card__link active-pricing-card-link">10 GB monthly uploads</a></li>
-                                <li class="card__item active-checked"><a href="" class="card__link active-pricing-card-link">200 MB max. note size</a></li>
-                                <li class="card__item active-checked"><a href="" class="card__link active-pricing-card-link">Customize Home dashboard and access extra widgets</a></li>
-                                <li class="card__item active-checked"><a href="" class="card__link active-pricing-card-link">Connect primary Google Calendar account</a></li>
-                                <li class="card__item active-checked"><a href="" class="card__link active-pricing-card-link">Add due dates, reminders, and notifications to your tasks</a></li>
+                                <li class="card__item active-checked"><a href="#" class="card__link active-pricing-card-link">Sync unlimited devices</a></li>
+                                <li class="card__item active-checked"><a href="#" class="card__link active-pricing-card-link">10 GB monthly uploads</a></li>
+                                <li class="card__item active-checked"><a href="#" class="card__link active-pricing-card-link">200 MB max. note size</a></li>
+                                <li class="card__item active-checked"><a href="#" class="card__link active-pricing-card-link">Customize Home dashboard and access extra widgets</a></li>
+                                <li class="card__item active-checked"><a href="#" class="card__link active-pricing-card-link">Connect primary Google Calendar account</a></li>
+                                <li class="card__item active-checked"><a href="#" class="card__link active-pricing-card-link">Add due dates, reminders, and notifications to your tasks</a></li>
                             </ul>
                             <button class="btn btn--small btn--blue">Get Started</button>
                         </div>
 
+                        <!-- Card Pricing -->
                         <div class="pricing__organization card">
                             <h4 class="card__title">Organization</h4>
                             <span class="card__pricing">$49.99</span>
-                            <p class="card__text">Capture ideas and find them quickly</p>
+                            <p class="card__description">Capture ideas and find them quickly</p>
                             <ul class="card__list">
                                 <li class="card__item"><a href="" class="card__link">Sync unlimited devices</a></li>
                                 <li class="card__item"><a href="" class="card__link">10 GB monthly uploads</a></li>
@@ -169,46 +202,67 @@
                             </ul>
                             <button class="btn btn--small btn--border-yellow">Get Started</button>
                         </div>
+
+                    </div>
+
+                    <!-- Controls Pricing -->
+                    <div class="slider__controls pricing__controls">
+                        <span class="slider__controls-item"></span>
+                        <span class="slider__controls-item active-slider-controls"></span>
+                        <span class="slider__controls-item"></span>
                     </div>
 
                 </div>
             </div>
         </section>
 
+        <!-- Your-work Section -->
         <section class="your-work padding-140">
             <div class="container">
                 <div class="your-work__container">
+
+                    <!-- Your-work Block -->
                     <div class="block__info color-white your-work__body">
                         <h1 class="block__title your-work__title">Your work, everywhere you are</h1>
-                        <p class="block__text">Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!</p>
+                        <p class="block__description">Access your notes from your computer, phone or tablet by synchronising with various services, including whitepace, Dropbox and OneDrive. The app is available on Windows, macOS, Linux, Android and iOS. A terminal app is also available!</p>
                         <button class="your-work__button btn btn--large btn--blue btn--arrow">Try Taskey</button>
-                    </div>                    
+                    </div>    
+
                 </div>
             </div>
         </section>
 
+        <!-- Your-date Section -->
         <section class="your-data padding-140">
             <div class="container">
                 <div class="your-data__container">
-                    <div class="block__container">
+
+                    <!-- Your-date Block -->
+                    <div class="block__container your-data__column-reverse">
                         <div class="block__info color-dark">
                             <h1 class="block__title your-data__title">100% your data</h1>
-                            <p class="block__text">The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them.</p>
-                            <button class="btn btn--large btn--blue btn--arrow">Read more</button>
+                            <p class="block__description">The app is open source and your notes are saved to an open format, so you'll always have access to them. Uses End-To-End Encryption (E2EE) to secure your notes and ensure no-one but yourself can access them.</p>
+                            <button class="btn btn--large btn--blue btn--arrow block__button">Read more</button>
                         </div>
                         <div class="block__image your-data__image">
                             <img class="block__img " src="./assets/img/your-data/your-data.png" alt="your-data">
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- Our-sponsors  Section -->
         <section class="our-sponsors padding-140">
             <div class="container">
                 <div class="our-sponsors__container">
+
+                    <!-- Our-sponsors Block -->
                     <div class=" color-dark our-sponsors__body">
                         <h1 class="block__title our-sponsors__title">Our sponsors</h1>
+
+                        <!-- Images Block -->
                         <div class="our-sponsors__images">
                             <div class="our-sponsors__image">
                                 <img src="./assets/img/our-sponsors/Apple.png" alt="Apple">
@@ -223,40 +277,52 @@
                                 <img src="./assets/img/our-sponsors/Google.png" alt="Google">
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- Apps Section -->
         <section class="apps padding-140">
             <div class="container">
                 <div class="apps__container">
-                    <div class="block__container row-reverse">
+
+                    <!-- Apps Block -->
+                    <div class="block__container apps__reverse">
                         <div class="block__info color-white">
                             <h1 class="block__title ">Work with Your Favorite Apps Using whitepace</h1>
-                            <p class="block__text">Whitepace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.</p>
-                            <button class="btn btn--large btn--blue btn--arrow">Read more</button>
+                            <p class="block__description">Whitepace teams up with your favorite software. Integrate with over 1000+ apps with Zapier to have all the tools you need for your project success.</p>
+                            <button class="btn btn--large btn--blue btn--arrow block__button">Read more</button>
                         </div>
 
-                        <div class="apps__image mr-100px">
+                        <div class="apps__image">
                             <img class="block__img" src="./assets/img/apps/Apps.png" alt="Apps">
                         </div>
-
                     </div>
+
                 </div>
             </div>
         </section>
 
+        <!-- Testimonial Section -->
         <section class="testimonial">
             <div class="container padding-140">
                 <div class="testimonial__container">
+
+                    <!-- Testimonial Title -->
                     <h1 class="block__title testimonial__title">What Our Clients Says</h1>
+
+                    <!-- Testimonial Slider -->
                     <div class="testimonial__cards slider">
+
+                        <!-- Card -->
                         <div class="card-testimonial active">
                             <div class="card-testimonial__image">
                                 <img src="./assets/icon/quote/Quote.svg" alt="Quote">
                             </div>
-                            <p class="card-testimonial__text active-text">Whitepate is designed as a collaboration tool for businesses that is a full project management solution.</p>
+                            <p class="card-testimonial__description active-text">Whitepate is designed as a collaboration tool for businesses that is a full project management solution.</p>
                             <span class="card-testimonial__line active-line"></span>
                             <div class="card-testimonial__name-box">
                                 <div class="name-box__avatar">
@@ -269,11 +335,12 @@
                             </div>
                         </div>
 
+                        <!-- Card -->
                         <div class="card-testimonial">
                             <div class="card-testimonial__image">
                                 <img src="./assets/icon/quote/white-Quote.svg" alt="Quote">
                             </div>
-                            <p class="card-testimonial__text">Whitepate is designed as a collaboration tool for businesses that is a full project management solution.</p>
+                            <p class="card-testimonial__description color-white">Whitepate is designed as a collaboration tool for businesses that is a full project management solution.</p>
                             <span class="card-testimonial__line "></span>
                             <div class="card-testimonial__name-box">
                                 <div class="name-box__avatar">
@@ -286,11 +353,12 @@
                             </div>
                         </div>
 
+                        <!-- Card -->
                         <div class="card-testimonial">
                             <div class="card-testimonial__image">
                                 <img src="./assets/icon/quote/white-Quote.svg" alt="Quote">
                             </div>
-                            <p class="card-testimonial__text">Whitepate is designed as a collaboration tool for businesses that is a full project management solution.</p>
+                            <p class="card-testimonial__description color-white">Whitepate is designed as a collaboration tool for businesses that is a full project management solution.</p>
                             <span class="card-testimonial__line "></span>
                             <div class="card-testimonial__name-box">
                                 <div class="name-box__avatar">
@@ -302,24 +370,119 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                    <div class="slider__navigation">
-                        <span class="slider__navigation-item"></span>
-                        <span class="slider__navigation-item active-slider-navigation"></span>
-                        <span class="slider__navigation-item"></span>
+
+                    <!-- Slider Controls -->
+                    <div class="slider__controls">
+                        <span class="slider__controls-item"></span>
+                        <span class="slider__controls-item active-slider-controls"></span>
+                        <span class="slider__controls-item"></span>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <section class="free-trial">
+        <!-- Testimonial-md  Section -->
+        <section class="testimonial-md">
             <div class="container padding-140">
+                <div class="testimonial__container">
+
+                    <!-- Testimonial-md  Title -->
+                    <h1 class="block__title testimonial__title">See what our trusted users Say</h1>
+
+                    <!-- Testimonial-md  Slider -->
+                    <div class="testimonial__cards slider">
+
+                        <!-- Card -->
+                        <div class="card-testimonial color-white">
+                            <div class="name-box__avatar-md">
+                                <img src="./assets/icon/quote/avatars/Avater.svg" alt="avatar">
+                            </div>
+                            <p class="card-testimonial__description-md ">“If you haven’t tried EventSprout yet, you need to give it a shot for your next event. It’s so easy and intuitive to get a new event setup and if you need any help their customer service is seriously amazing.”</p>
+                            <div class="card-testimonial__name-box">
+                                <div class="name-box__descriprion">
+                                    <span class="name-box__name-md">Jessie Owner</span>
+                                    <span class="name-box__position-md ">Founder, XYZ Company</span>
+                                </div>
+                                <div class="name__raiting-md">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card -->
+                        <div class="card-testimonial active">
+                            <div class="name-box__avatar-md">
+                                <img src="./assets/img/testimonial-md/Avater2.png" alt="avatar">
+                            </div>
+                            <p class="card-testimonial__description-md active-text">“If you haven’t tried EventSprout yet, you need to give it a shot for your next event. It’s so easy and intuitive to get a new event setup and if you need any help their customer service is seriously amazing.”</p>
+                            <div class="card-testimonial__name-box">
+                                <div class="name-box__descriprion">
+                                    <span class="name-box__name-md">Jessie Owner</span>
+                                    <span class="active name-box__position-md ">Founder, XYZ Company</span>
+                                </div>
+                                <div class="name__raiting-md">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card -->
+                        <div class="card-testimonial color-white">
+                            <div class="name-box__avatar-md">
+                                <img src="./assets/img/testimonial-md/Avater1.png" alt="avatar">
+                            </div>
+                            <p class="card-testimonial__description-md">“If you haven’t tried EventSprout yet, you need to give it a shot for your next event. It’s so easy and intuitive to get a new event setup and if you need any help their customer service is seriously amazing.”</p>
+                            <div class="card-testimonial__name-box">
+                                <div class="name-box__descriprion">
+                                    <span class="name-box__name-md">Jessie Owner</span>
+                                    <span class="name-box__position-md">Founder, XYZ Company</span>
+                                </div>
+                                <div class="name__raiting-md">
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="slider__controls">
+                        <span class="slider__controls-item"></span>
+                        <span class="slider__controls-item active-slider-controls"></span>
+                        <span class="slider__controls-item"></span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Free-trial Section -->
+        <section class="free-trial">
+            <div class="container padding-140-32">
                 <div class="free-trial__container">
+
+                    <!-- Free-trial body -->
                     <h1 class="block__title color-white">Try Whitepace today</h1>
-                    <p class="free-trial__text block__text color-white">Get started for free. <br> Add your whole team as your needs grow.</p>
+                    <p class="free-trial__text block__description color-white">Get started for free. <br> Add your whole team as your needs grow.</p>
                     <button class="free-trial__button btn btn--large btn--blue btn--arrow">Try Taskey free</button>
-                    <p class="free-trial__under-text block__text color-white">On a big team? Contact sales</p>
+                    <p class="free-trial__under-text block__description color-white">On a big team? Contact sales</p>
+
+                    <!-- Free-trial Icons -->
                     <div class="free-trial__app-icons">
                         <a class="free-trial__app-icon-item" href="#">
                             <img class="free-trial__app-icon" src="./assets/icon/free-trial/android-logo.png" alt="android-logo">
@@ -331,46 +494,57 @@
                             <img class="free-trial__app-icon" src="./assets/icon/free-trial/apple-black-logo.png" alt="apple-black-logo">
                         </a>
                     </div>
+
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container ">
+        <div class="container padding-140-32">
             <div class="footer__container">
                 <div class="footer__body">
+
+                    <!-- Logo -->
                     <div class="footer__logo">
                         <a href="#" class="footer__logo-link">
                             <img class="footer__image" src="./assets/icon/logo/Logo-for-bg-blue.svg" alt="footer__logo">
                         </a>
                         <p class="footer__text">whitepace was created for the new ways we live and work. We make a better workspace around the world</p>
                     </div>
+
+                    <!-- Navigation -->
                     <div class="footer__navigation">
                         <h3 class="footer__navigation-title">Product</h3>
-                        <ul class="footer__list-product">
+                        <ul class="footer__list">
                             <li class="footer__item"><a href="" class="footer__link">Overview</a></li>
                             <li class="footer__item"><a href="" class="footer__link">Pricing</a></li>
                             <li class="footer__item"><a href="" class="footer__link">Customer stories</a></li>
-                            
                         </ul>
                     </div>
+
+                    <!-- Navigation -->
                     <div class="footer__navigation">
                         <h3 class="footer__navigation-title">Resourses</h3>
-                        <ul class="footer__list-resources">
+                        <ul class="footer__list">
                             <li class="footer__item"><a href="" class="footer__link">Blog</a></li>
                             <li class="footer__item"><a href="" class="footer__link">Guides & tutorials</a></li>
                             <li class="footer__item"><a href="" class="footer__link">Help center</a></li>
                         </ul>
                     </div>
+
+                    <!-- Navigation -->
                     <div class="footer__navigation">
                         <h3 class="footer__navigation-title">Company</h3>
-                        <ul class="footer__list-company">
+                        <ul class="footer__list">
                             <li class="footer__item"><a href="" class="footer__link">About us</a></li>
                             <li class="footer__item"><a href="" class="footer__link">Careers</a></li>
                             <li class="footer__item"><a href="" class="footer__link">Media kit</a></li>
                         </ul>
                     </div>
+
+                    <!-- Try -->
                     <div class="footer__try">
                         <h4 class="footer__try-title">Try It Today</h4>
                         <p class="footer__try-text">
@@ -378,29 +552,37 @@
                         </p>
                         <button class="btn btn--large btn--blue btn--arrow footer__try-button">Start today</button>
                     </div>
+
                 </div>
+
+                <!-- Line -->
                 <span class="footer__line"></span>
+
+                <!-- Copy-rigth  Block -->
                 <div class="footer__copy-rigth copy-rigth">
+
+                    <!-- Navigation Copy-rigth -->
                     <div class="copy-right__navigation">
                         <ul class="copy-right__list">
                             <li class="copy-right__link">
-                                <a class="copy-right__item copy-right__english">English<a>
+                                <a class="copy-right__item copy-right__english">English</a>
                             </li>
                             <li class="copy-right__link">
-                                <a class="copy-right__item">Terms & privacy<a>
+                                <a class="copy-right__item">Terms & privacy</a>
                             </li>
                             <li class="copy-right__link">
-                                <a class="copy-right__item">Security<a>
+                                <a class="copy-right__item">Security</a>
                             </li>
                             <li class="copy-right__link">
-                                <a class="copy-right__item">Status<a>
+                                <a class="copy-right__item">Status</a>
                             </li>
                             <li class="copy-right__link">
-                                <a class="copy-right__item">©2021 Whitepace LLC.<a>
+                                <a class="copy-right__item">©2021 Whitepace LLC.</a>
                             </li>
                         </ul>
-
                     </div>
+
+                    <!-- Social Copy-rigth -->
                     <div class="copy-right__social">
                         <a class="copy-right__icons" href="">
                             <img src="./assets/icon/footer/social-icon/Facebook.svg" alt="Facebook">
@@ -411,12 +593,13 @@
                         <a class="copy-right__icons" href="">
                             <img src="./assets/icon/footer/social-icon/Linkedin.svg" alt="Linkedin">
                         </a>
-
                     </div>
+
                 </div>
+
             </div>
         </div>
     </footer>
-    
+
 </body>
 </html>

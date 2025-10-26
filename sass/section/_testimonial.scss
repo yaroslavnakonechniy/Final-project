@@ -1,146 +1,310 @@
+@use '../base/variables' as *; // Import variables
+@use '../base/mixin' as *;     // Import mixins
+@use 'sass:map';               // Import Sass map utilities
 
-@use '../base/variables' as *;
-@use '../base/mixin' as *;
-@use "sass:map";
-
+// =========================================================
+// SECTION: Testimonial
+// Description: Styles for testimonial cards and layout
+// =========================================================
 .testimonial {
+  &__container {
+    display: block;
+    text-align: center;
+  }
 
-		&__container {
-            display: block;
-            text-align: center;
-		}
+  &__title {
+    position: relative;
 
-        &__title{
-            @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 18% 140%, 75% 120%);
-        }
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('../assets/img/bg-line/bg-line-mobile.png') no-repeat;
+      background-position: 73% 105%;
+      background-size: 13%;
+      z-index: -1;
+    }
+  }
 
-		&__cards {
-            display: flex;
-            text-align: left;
-            margin-top: 60px;
-            gap: 32px;
-            margin-bottom: 60px;
-		}
+  &__cards {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 32px;
+    margin: 60px 0;
+  }
+}
+
+// =========================================================
+// COMPONENT: Testimonial Card
+// =========================================================
+.card-testimonial {
+  width: 471px;
+  padding: 60px 40px;
+  background-color: $primaryLight;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  &__image {
+    margin-bottom: 32px;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $secondaryWhite;
+  }
+
+  &__name-box {
+    display: flex;
+    gap: 42px;
+    margin-top: 60px;
+  }
+
+  // Medium (MD) variant
+  &__description-md {
+    margin-bottom: 49px;
+  }
+
+  &__name-box {
+    gap: 0;
+  }
+
+  &__image img {
+    width: 56px;
+    height: 40px;
+  }
+
+  &__description {
+    @include size-weight($ParagraphP3RegularFontSize, 400);
+  }
+}
+
+// =========================================================
+// COMPONENT: Name Box
+// =========================================================
+.name-box {
+  &__avatar {}
+
+  &__descriprion {}
+
+  &__name {
+    display: block;
+    @include size-weight($ParagraphP1RegularFontSize, 600);
+    line-height: 36px;
+    color: $primaryDark;
+    margin-bottom: 15px;
+  }
+
+  &__position {
+    display: block;
+    @include size-weight($H6FontSize, 400);
+    line-height: 20px;
+    color: $secondaryWhite;
+  }
+
+  // MD variant
+  &__avatar-md img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 35px;
+  }
+
+  &__name-md {
+    display: block;
+    @include size-weight($fontSize, 700);
+  }
+
+  &__position-md {
+    @include size-weight($fontSize, 400);
+  }
+}
+
+// =========================================================
+// COMPONENT: Rating (Stars)
+// =========================================================
+.name__raiting-md {
+  display: flex;
+  gap: 7px;
+}
+
+.star {
+  position: relative;
+  padding-left: 15px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: url('../assets/icon/star/Star.svg') center / contain no-repeat;
+  }
+}
+
+// =========================================================
+// COMPONENT: Slider Controls
+// =========================================================
+.slider {
+  &__controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  &__controls-item {
+    position: relative;
+    padding-right: 12px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $primaryLight;
+    }
+  }
+}
+
+// =========================================================
+// Active classes
+// =========================================================
+.active-slider-controls {
+  &::after {
+    background-color: $primaryDark;
+  }
+}
+
+.active {
+  color: $secondaryBlack;
+  background-color: $secondaryWhite;
+  box-shadow: 15px 10px 50px rgba(0, 0, 0, 0.1);
+}
+
+.active-line {
+  background-color: $secondaryBlack;
+}
+
+.active-text {
+  color: $secondaryBlack;
+}
+
+// Hidden testimonial for MD view
+.testimonial-md {
+  display: none;
 }
 
 .card-testimonial {
-    width: 471px;
-    background-color: $primaryLight;
-    border: none;
-    border-radius: 10px;
-    box-sizing: border-box;
-    padding: 60px 40px;
-
-    
-		&__image {
-            margin-bottom: 32px;
-		}
-
-		&__text {
-            @include size-weight($fontSize, 400);
-            line-height: 30px;
-            color: $secondaryWhite;
-            margin-bottom: 40px;
-		}
-
-        &__line{
-            display: block;
-            width: 100%;
-            height: 1px;
-            background-color: $secondaryWhite;
-        }
-
-		&__name-box {
-            display: flex;
-            gap: 42px;
-            margin-top: 60px;
-
-		}
-}
-.name-box {
-
-		&__avatar {
-		}
-
-		&__descriprion {
-		}
-
-		&__name {
-            display: block;
-            @include size-weight($ParagraphP1RegularFontSize, 600);
-            line-height: 36px;
-            color: $primaryDark;
-            margin-bottom: 15px;
-		}
-
-        &__position {
-            display: block;
-            @include size-weight($H6FontSize, 400);
-            line-height: 20px;
-            color: $secondaryWhite;
-		}
+  width: 341px;
+  flex: 0 0 341px;
+  padding: 20px;
 }
 
-.slider {
+// =========================================================
+// MEDIA QUERIES
+// =========================================================
 
-  &__navigation {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-  }
-  &__navigation-item {
-    position: relative;
-    padding-right: 12px;
-    &::after{
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        width: 12px;
-        height: 12px;
-        border: none;
-        border-radius: 50%;
-        background-color: $primaryLight;
-    }
-  }
-}
-
-.active-slider-navigation {
-    &::after{
-        background-color: $primaryDark;
-    }
-}
-
-.active{
-    color: $secondaryBlack;
-    background-color: $secondaryWhite;
-    box-shadow: 15px 10px 50px 0px rgba(0, 0, 0, 0.1);
-}
-
-.active-line{
-    background-color: $secondaryBlack;
-}
-
-.active-text{
-    color: $secondaryBlack;
-}
-
+// ---------- XL (≤ 1400px) ----------
 @media (max-width: map.get($breakpoints, xl)) {
-    .testimonial__title {
-        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 18% 130%, 70% 120%);
-    }
+  .testimonial__title::after {
+    background-position: 78% 105%;
+    background-size: 15%;
+  }
 
-    .card-testimonial {
-        width: 437px;
-    }
+  .card-testimonial {
+    width: 437px;
+  }
 }
 
+// ---------- LG (≤ 1152px) ----------
 @media (max-width: map.get($breakpoints, lg)) {
-    .testimonial__title {
-        @include underline-bg(url('../assets/img/bg-line/bg-line.png') no-repeat, 18% 130%, 70% 120%);
-    }
+  .testimonial__title::after {
+    background-position: 85% 105%;
+    background-size: 18%;
+  }
 
-    .card-testimonial {
-        width: 341px;
-    }
+  .testimonial__cards {
+    overflow-x: auto;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  .card-testimonial {
+    flex: 0 0 341px;
+    scroll-snap-align: start;
+  }
+}
+
+// ---------- PLUS-MD (≤ 992px) ----------
+@media (max-width: map.get($breakpoints, plus-md)) {
+  .testimonial__title::after {
+    background-position: 88% 105%;
+    background-size: 20%;
+  }
+}
+
+// ---------- MD (≤ 768px) ----------
+@media (max-width: map.get($breakpoints, md)) {
+  .testimonial {
+    display: none;
+  }
+
+  .testimonial-md {
+    display: block;
+  }
+
+  .testimonial__title::after {
+    background-position: 50% 105%;
+    background-size: 40%;
+  }
+}
+
+// ---------- CUSTOM-SM (≤ 567px) ----------
+@media (max-width: map.get($breakpoints, custom-sm)) {
+  .testimonial {
+    display: block;
+  }
+
+  .testimonial-md {
+    display: none;
+  }
+
+  .card-testimonial {
+    flex: 0 0 280px;
+  }
+}
+
+// ---------- SM (≤ 320px) ----------
+@media (max-width: map.get($breakpoints, sm)) {
+  .testimonial__title::after {
+    background-position: 60% 105%;
+    background-size: 40%;
+  }
+
+  .card-testimonial {
+    scroll-snap-align: none;
+  }
+
+  .card-testimonial__name-box {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .testimonial__cards {
+    overflow-x: none;
+    scroll-snap-type: none;
+  }
 }
