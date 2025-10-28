@@ -16,6 +16,8 @@
 
   &__title {
     position: relative;
+    width: 600px;
+    margin: 0 auto;
 
     &::after {
       position: absolute;
@@ -25,7 +27,7 @@
       width: 100%;
       height: 100%;
       background: url('../assets/img/bg-line/bg-line-md.png') no-repeat;
-      background-position: 60% 105%;
+      background-position: 95% 105%;
       z-index: -1;
     }
   }
@@ -40,6 +42,7 @@
   &__free {}
   &__personal {}
   &__organization {}
+  &__br{}
 }
 
 // =========================================================
@@ -124,15 +127,7 @@
 // =========================================================
 
 // ---------- XL (≤ 1400px) ----------
-@media (max-width: map.get($breakpoints, xl)) {
-  .pricing {
-    &__title {
-      &::after {
-        background-position: 65% 105%;
-      }
-    }
-  }
-
+@include media (xl) {
   .card,
   .active-pricing-card {
     width: 437px;
@@ -140,18 +135,16 @@
 }
 
 // ---------- LG (≤ 1152px) ----------
-@media (max-width: map.get($breakpoints, lg)) {
+@include media (lg) {
   .pricing {
-    &__title {
-      &::after {
-        background-position: 70% 105%;
-      }
-    }
-
     &__cards {
       overflow-x: auto;
       overflow: hidden;
       scroll-snap-type: x mandatory;
+    }
+
+    &__br{
+      display: none;
     }
   }
 
@@ -162,28 +155,18 @@
   }
 }
 
-// ---------- PLUS-MD (≤ 992px) ----------
-@media (max-width: map.get($breakpoints, plus-md)) {
-  .pricing {
-    &__title {
-      &::after {
-        background-position: 75% 105%;
-      }
-    }
-  }
-}
-
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md)
+ {
   .pricing {
     &__title {
+      width: 100%;
       &::after {
         width: 60%;
         background-position: 30% 105%;
         background-size: 60%;
       }
     }
-
   }
 
   .card,
@@ -210,7 +193,8 @@
 }
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
+
   .pricing {
     &__title {
       &::after {

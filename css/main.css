@@ -259,7 +259,7 @@ button:active {
   display: block;
   width: 12px;
   height: 12px;
-  margin-left: 18px;
+  margin-left: 10px;
   background: url("../assets/icon/arrow/arrow-right-for-button.svg") center/contain no-repeat;
 }
 .btn:hover {
@@ -626,6 +626,8 @@ button:active {
 }
 .pricing__title {
   position: relative;
+  width: 600px;
+  margin: 0 auto;
 }
 .pricing__title::after {
   position: absolute;
@@ -635,7 +637,7 @@ button:active {
   width: 100%;
   height: 100%;
   background: url("../assets/img/bg-line/bg-line-md.png") no-repeat;
-  background-position: 60% 105%;
+  background-position: 95% 105%;
   z-index: -1;
 }
 .pricing__cards {
@@ -737,22 +739,19 @@ button:active {
 }
 
 @media (max-width: 1400px) {
-  .pricing__title::after {
-    background-position: 65% 105%;
-  }
   .card,
   .active-pricing-card {
     width: 437px;
   }
 }
 @media (max-width: 1152px) {
-  .pricing__title::after {
-    background-position: 70% 105%;
-  }
   .pricing__cards {
     overflow-x: auto;
     overflow: hidden;
     scroll-snap-type: x mandatory;
+  }
+  .pricing__br {
+    display: none;
   }
   .card,
   .active-pricing-card {
@@ -760,12 +759,10 @@ button:active {
     scroll-snap-align: center;
   }
 }
-@media (max-width: 992px) {
-  .pricing__title::after {
-    background-position: 75% 105%;
-  }
-}
 @media (max-width: 768px) {
+  .pricing__title {
+    width: 100%;
+  }
   .pricing__title::after {
     width: 60%;
     background-position: 30% 105%;
@@ -1462,11 +1459,11 @@ button:active {
   content: "";
   display: block;
   top: -10%;
-  left: -40%;
-  width: 100%;
+  left: 0;
+  width: 400px;
   height: 100%;
-  background: url("../assets/img/your-work/bg-your-work/bg-your-work.png") center/cover no-repeat;
-  background-size: 28%;
+  background: url("../assets/img/your-work/bg-your-work/bg-your-work.png") center/contain no-repeat;
+  background-size: 100%;
   z-index: 0;
 }
 .your-work__container {
@@ -1505,11 +1502,11 @@ button:active {
     content: "";
     display: block;
     top: -10%;
-    left: -50%;
-    width: 100%;
+    left: -5%;
+    width: 400px;
     height: 100%;
     background: url("../assets/img/your-work/bg-your-work/bg-your-work.png") center/cover no-repeat;
-    background-size: 28%;
+    background-size: 90%;
     z-index: 0;
   }
 }
@@ -1521,12 +1518,12 @@ button:active {
     position: absolute;
     content: "";
     display: block;
-    top: -10%;
-    left: -40%;
-    width: 100%;
+    top: -30%;
+    left: -15%;
+    width: 400px;
     height: 100%;
     background: url("../assets/img/your-work/bg-your-work/bg-your-work.png") center/cover no-repeat;
-    background-size: 28%;
+    background-size: 70%;
     z-index: 0;
   }
   .your-work__container {
@@ -1548,12 +1545,12 @@ button:active {
     position: absolute;
     content: "";
     display: block;
-    top: -10%;
-    left: -40%;
-    width: 100%;
+    top: -35%;
+    left: -15%;
+    width: 300px;
     height: 100%;
     background: url("../assets/img/your-work/bg-your-work/bg-your-work.png") center/cover no-repeat;
-    background-size: 35%;
+    background-size: 70%;
     z-index: 0;
   }
   .your-work__body {
@@ -1574,7 +1571,7 @@ button:active {
     display: block;
     top: -35%;
     left: -40%;
-    width: 100%;
+    width: 400px;
     height: 100%;
     background: url("../assets/img/your-work/bg-your-work/bg-your-work.png") center/cover no-repeat;
     background-size: 60%;
@@ -1619,6 +1616,11 @@ button:active {
   display: flex;
   gap: 24px;
 }
+.header__button-try {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
 .logo__img {
   width: 191px;
   height: 34px;
@@ -1648,9 +1650,6 @@ button:active {
   color: #FFFFFF;
   background: url("../assets/icon/arrow/arrow-down-white.svg") center/contain no-repeat;
   transform: translateY(-50%);
-}
-.list__link:hover::after {
-  transform: scale(1.1);
 }
 .list__link:hover {
   text-decoration: underline;

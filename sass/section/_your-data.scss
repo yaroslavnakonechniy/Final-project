@@ -42,10 +42,10 @@
 // =========================================================
 
 // ---------- XL (≤ 1400px) ----------
-@media (max-width: map.get($breakpoints, lg)) {}
+@include media (lg) {}
 
 // ---------- LG (≤ 1152px) ----------
-@media (max-width: map.get($breakpoints, lg)) {
+@include media (lg) {
   .your-data {
     &__title {
       &::after {
@@ -62,7 +62,7 @@
 }
 
 // ---------- PLUS-MD (≤ 992px) ----------
-@media (max-width: map.get($breakpoints, plus-md)) {
+@include media (plus-md) {
   .your-data {
     &__title {
       &::after {
@@ -79,7 +79,8 @@
 }
 
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md)
+ {
   .your-data {
     &__column-reverse {
       flex-direction: column-reverse;
@@ -116,7 +117,8 @@
 }
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
+
   .your-data {
     &__title {
       &::after {

@@ -28,17 +28,17 @@
 // =========================================================
 
 // ---------- XL (≤ 1400px) ----------
-@media (max-width: map.get($breakpoints, lg)) {}
+@include media (xl) {}
 
 // ---------- LG (≤ 1152px) ----------
-@media (max-width: map.get($breakpoints, lg)) {
+@include media (lg) {
   .apps__image {
     @include shink-grow-height(0 0 528px, 427px);
   }
 }
 
 // ---------- PLUS-MD (≤ ~992px) ----------
-@media (max-width: map.get($breakpoints, plus-md)) {
+@include media (plus-md) {
   .apps__image {
     @include image-block-parameters(600px, 500px);
     flex: none;
@@ -47,7 +47,8 @@
 }
 
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md)
+ {
   .apps {
     &__image {
       @include image-block-parameters(485px, 392px);
@@ -57,7 +58,8 @@
 }
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
+
   .apps {
     &__image {
       @include image-block-parameters(286px, 231px);

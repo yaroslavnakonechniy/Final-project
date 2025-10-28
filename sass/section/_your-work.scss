@@ -8,12 +8,13 @@
 // =========================================================
 .your-work {
   background-color: $primaryDark;
-  @include bg-element(
-    -10%, 
-    -40%,
-    url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / cover no-repeat,
-    28%
-  );
+    @include bg-element(
+      -10%, 
+      0,
+      400px,
+      url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / contain no-repeat,
+      100%
+    );
 
   &__container {
     display: block;
@@ -52,25 +53,27 @@
 // =========================================================
 
 // ---------- XL (≤ 1400px) ----------
-@media (max-width: map.get($breakpoints, xl)) {
+@include media (xl) {
   .your-work {
     @include bg-element(
       -10%, 
-      -50%,
+      -5%,
+      400px,
       url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / cover no-repeat,
-      28%
+      90%
     );
   }
 }
 
 // ---------- LG (≤ 1152px) ----------
-@media (max-width: map.get($breakpoints, lg)) {
+@include media (lg) {
   .your-work {
     @include bg-element(
-      -10%, 
-      -40%,
+      -30%, 
+      -15%,
+      400px,
       url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / cover no-repeat,
-      28%
+      70%
     );
 
     &__container {
@@ -89,13 +92,15 @@
 }
 
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md)
+ {
   .your-work {
     @include bg-element(
-      -10%, 
-      -40%,
+      -35%, 
+      -15%,
+      300px,
       url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / cover no-repeat,
-      35%
+      70%
     );
 
     &__body {
@@ -112,11 +117,13 @@
 }
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
+
   .your-work {
     @include bg-element(
       -35%, 
       -40%,
+      400px,
       url('../assets/img/your-work/bg-your-work/bg-your-work.png') center / cover no-repeat,
       60%
     );

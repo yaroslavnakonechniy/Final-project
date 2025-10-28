@@ -147,14 +147,14 @@
 // =========================================================
 
 // ---------- XL (≤ 1400px) ----------
-@media (max-width: map.get($breakpoints, xl)) {
+@include media (xl) {
   .copy-right__list {
     gap: 40px;
   }
 }
 
 // ---------- LG (≤ 1152px) ----------
-@media (max-width: map.get($breakpoints, lg)) {
+@include media (lg) {
   .footer {
     &__body {
       flex-wrap: wrap;
@@ -172,7 +172,8 @@
 }
 
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md)
+ {
   .footer {
     &__container {
       padding-top: 80px;
@@ -202,7 +203,8 @@
 }
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
+
   .footer {
     &__container {
       padding-top: 80px;

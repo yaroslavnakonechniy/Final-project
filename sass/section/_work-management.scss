@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     gap: 100px;
-    @include bg-element(10%, -20%, url('../assets/img/work/bg-work/bg-work.png') no-repeat, 30%);
+    @include bg-element(10%, -20%, 100%, url('../assets/img/work/bg-work/bg-work.png') no-repeat, 30%);
   }
 
   &__block{
@@ -71,10 +71,10 @@
 // =========================================================
 
 // ---------- XL (≤ 1400px) ----------
-@media (max-width: map.get($breakpoints, xl)) {
+@include media (xl) {
   .work-management{
     &__container{
-      @include bg-element(-10%, -20%, url('../assets/img/work/bg-work/bg-work.png') no-repeat, 40%);
+      @include bg-element(-10%, -20%, 100%, url('../assets/img/work/bg-work/bg-work.png') no-repeat, 40%);
     }
     
     &__image{
@@ -88,7 +88,7 @@
 }
 
 // ---------- LG (≤ 1152px) ----------
-@media (max-width: map.get($breakpoints, lg)) {
+@include media (lg) {
   .work-management {
 
     &__title-together{
@@ -111,10 +111,10 @@
 }
 
 // ---------- PLUS-MD (≤ 992px) ----------
-@media (max-width: map.get($breakpoints, plus-md)) {
+@include media (plus-md) {
   .work-management{
     &__container{
-      @include bg-element(-5%, -20%, url('../assets/img/work/bg-work/bg-work.png') no-repeat, 40%);
+      @include bg-element(-5%, -20%, 100%, url('../assets/img/work/bg-work/bg-work.png') no-repeat, 40%);
     }
 
     &__block{
@@ -154,12 +154,14 @@
 }
 
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md)
+ {
   .work-management{
     &__container{
       @include bg-element(
         -7%, 
-        -20%, 
+        -20%,
+        100%, 
         url('../assets/img/work/bg-work/bg-work.png') no-repeat,
         40%
       );
@@ -193,7 +195,8 @@
 }
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
+
   .work-management{
 
     &__title-project{
@@ -232,7 +235,7 @@
     }
       
     &__container{
-      @include bg-element(-5%, -20%, url('../assets/img/work/bg-work/bg-work.png') no-repeat, 40%);
+      @include bg-element(-5%, -20%, 100%, url('../assets/img/work/bg-work/bg-work.png') no-repeat, 40%);
     } 
   }  
 }

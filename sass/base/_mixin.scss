@@ -1,7 +1,9 @@
 @use './variables' as *; // Import global variables
+@use "sass:map";         // Import Sass map utilities
+
 
 // ==============================
-// 📏 Typography Mixins
+// Typography Mixins
 // ==============================
 
 /// Sets both font size and weight.
@@ -91,9 +93,10 @@
 /// Often used for visual accents in sections.
 /// @param {Number} $top - Top offset
 /// @param {Number} $left - Left offset
+/// @param {Number} $width - Width image
 /// @param {String} $background-url - Background image URL
 /// @param {String} $background-size - Background size
-@mixin bg-element($top, $left, $background-url, $background-size) {
+@mixin bg-element($top, $left, $width, $background-url, $background-size) {
   position: relative;
 
   &::before {
@@ -102,7 +105,7 @@
     display: block;
     top: $top;
     left: $left;
-    width: 100%;
+    width: $width;
     height: 100%;
     background: $background-url;
     background-size: $background-size;
@@ -129,4 +132,12 @@
 @mixin shink-grow-height($flex, $height) {
   flex: $flex;
   height: $height;
+}
+
+/// Responsive breakpoint mixin
+/// @param {String} $breakpoint - The key name from the $breakpoints map (e.g., sm, md, lg, xl, etc.)
+@mixin media($breakpoint) {
+  @media (max-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
 }
