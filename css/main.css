@@ -757,7 +757,7 @@ button:active {
   .card,
   .active-pricing-card {
     flex: 0 0 341px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
 }
 @media (max-width: 992px) {
@@ -771,13 +771,9 @@ button:active {
     background-position: 30% 105%;
     background-size: 60%;
   }
-  .pricing__cards {
-    scroll-snap-type: x mandatory;
-  }
   .card,
   .active-pricing-card {
     flex: 0 0 472px;
-    scroll-snap-align: start;
   }
 }
 @media (max-width: 567px) {
@@ -788,7 +784,6 @@ button:active {
   .card,
   .active-pricing-card {
     flex: 0 0 289px;
-    scroll-snap-align: start;
   }
 }
 @media (max-width: 320px) {
@@ -996,7 +991,7 @@ button:active {
   }
   .card-testimonial {
     flex: 0 0 341px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
 }
 @media (max-width: 992px) {
