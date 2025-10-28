@@ -218,7 +218,7 @@
 // =========================================================
 
 // ---------- XL (≤ 1400px) ----------
-@media (max-width: map.get($breakpoints, xl)) {
+@include media (xl) {
   .testimonial__title::after {
     background-position: 78% 105%;
     background-size: 15%;
@@ -230,7 +230,7 @@
 }
 
 // ---------- LG (≤ 1152px) ----------
-@media (max-width: map.get($breakpoints, lg)) {
+@include media (lg) {
   .testimonial__title::after {
     background-position: 85% 105%;
     background-size: 18%;
@@ -249,7 +249,7 @@
 }
 
 // ---------- PLUS-MD (≤ 992px) ----------
-@media (max-width: map.get($breakpoints, plus-md)) {
+@include media (plus-md) {
   .testimonial__title::after {
     background-position: 88% 105%;
     background-size: 20%;
@@ -257,7 +257,8 @@
 }
 
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md)
+ {
   .testimonial {
     display: none;
   }
@@ -288,7 +289,8 @@
 }
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
+
   .testimonial__title::after {
     background-position: 60% 105%;
     background-size: 40%;

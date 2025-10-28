@@ -1,5 +1,5 @@
 @use '../base/variables' as *; // Import project variables
-@use "sass:map";                // Import Sass map utilities
+@use '../base/mixin' as *;
 
 // White text color
 .color-white {
@@ -27,7 +27,7 @@
 // =========================================================
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
   .padding-140 {
     padding-top: 80px;
     padding-bottom: 80px;

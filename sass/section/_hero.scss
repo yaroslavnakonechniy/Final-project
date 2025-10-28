@@ -58,21 +58,21 @@
 // =========================================================
 
 // ---------- XL (≤ 1400px) ----------
-@media (max-width: map.get($breakpoints, xl)) {
+@include media (xl) {
   .hero__image {
     @include image-block-parameters(685px, 456px);
   }
 }
 
 // ---------- LG (≤ 1152px) ----------
-@media (max-width: map.get($breakpoints, lg)) {
+@include media (lg) {
   .hero__image {
     @include image-block-parameters(526px, 350px);
   }
 }
 
 // ---------- PLUS-MD (≤ 992px) ----------
-@media (max-width: map.get($breakpoints, plus-md)) {
+@include media (plus-md) {
   .hero__image {
     @include image-block-parameters(600px, 500px);
   }
@@ -96,7 +96,8 @@
 }
 
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md)
+ {
   .hero__image {
     @include image-block-parameters(551px, 367px);
     margin: 0 auto;
@@ -108,7 +109,8 @@
 }
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
+
   .hero__image {
     @include image-block-parameters(286px, 191px);
     margin: 0 auto;

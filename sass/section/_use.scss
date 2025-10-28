@@ -46,7 +46,7 @@
 // =========================================================
 
 // ---------- XL (≤ 1400px) ----------
-@media (max-width: map.get($breakpoints, xl)) {
+@include media (xl) {
   .use {
     &__title {
       &::after {
@@ -61,7 +61,7 @@
 }
 
 // ---------- LG (≤ 1152px) ----------
-@media (max-width: map.get($breakpoints, lg)) {
+@include media (lg) {
   .use {
     &__image {
       @include shink-grow-height(0 0 459px, 320px);
@@ -78,7 +78,7 @@
 }
 
 // ---------- PLUS-MD (≤ 992px) ----------
-@media (max-width: map.get($breakpoints, plus-md)) {
+@include media (plus-md) {
   .use {
     &__title {
       width: 100%;
@@ -101,7 +101,8 @@
 }
 
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md)
+ {
   .use {
     &__title {
       &::after {
@@ -127,7 +128,8 @@
 }
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
+
   .use {
     &__title {
       &::after {

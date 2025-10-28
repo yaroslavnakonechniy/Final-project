@@ -16,13 +16,15 @@
 // =========================================================
 
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md)
+ {
   .container {
     padding: 0 20px;
   }
 }
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
+
   .container {
     padding: 0 16px;
   }

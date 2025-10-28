@@ -1,6 +1,7 @@
 @use './variables' as *; // Import global variables
 @use './mixin' as *;     // Import reusable mixins
-@use "sass:map";         // Import Sass map utilities
+ 
+
 
 // ==============================
 // Global Typography & Base Styles
@@ -79,7 +80,7 @@ button {
 // =========================================================
 
 // ---------- MD (≤ 768px) ----------
-@media (max-width: map.get($breakpoints, md)) {
+@include media (md){
   h1,
   h2 {
     @include size-weight($H3FontSize, 700);
@@ -87,7 +88,7 @@ button {
 }
 
 // ---------- SM (≤ 320px) ----------
-@media (max-width: map.get($breakpoints, sm)) {
+@include media (sm) {
   h1,
   h2 {
     @include size-weight($H4FontSize, 700);
